@@ -2,10 +2,10 @@
 session_start();
 require_once("connectDB.php");
 
-$strUsername = $_POST['firstname'];
+$strUsername = $_POST['username'];
 $strPassword = $_POST['password'];
 
-$sql = "SELECT * FROM all_member WHERE m_firstname = '".$strUsername."' and m_password = '".$strPassword."'";
+$sql = "SELECT * FROM member WHERE m_username = '".$strUsername."' and m_password = '".$strPassword."'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
@@ -18,7 +18,10 @@ $row = $result->fetch_assoc();
 		$_SESSION["m_id"] = $row["m_id"];
 		$_SESSION["m_firstname"] = $row["m_firstname"];
 		$_SESSION["m_lastname"] = $row["m_lastname"];
+		$_SESSION["m_email"] = $row["m_email"];
+		$_SESSION["m_phone"] = $row["m_phone"];
 		$_SESSION["m_status"] = $row["m_status"];
+		
 		//Bla Bla Bla
 		session_write_close();
 		if($row["m_status"] == "admin"){

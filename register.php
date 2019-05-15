@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Plant Disease</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/css/style.css">
+    <!-- <link rel="stylesheet" href="bootstrap/css/style.css"> -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="shortcut icon" href="img/leaficon.ico" type="image/x-icon" />
 
@@ -43,6 +43,8 @@
                 <label id="first">Passwowrd :</label><br/>
                 <input class="form-control" type="password" name="password" required><br/>
                 <br>
+
+                <input type="hidden" name="status" value="user">
                 
                 <button  class="btn-primary form-control col-3" id="insert" type="submit" name="save" style="float: right;"> Save.</button>
                 <br><br>
