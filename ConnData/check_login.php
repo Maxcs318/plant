@@ -26,8 +26,8 @@ $row = $result->fetch_assoc();
 		session_write_close();
 		if($row["m_status"] == "admin"){
 			header("location:../Actor/Admin/AdminPage.php");
-		}else if($row["m_status"] == "master"){
-			header("location:../Actor/Master/MasterPage.php");
+		}else if($row["m_status"] == "expert"){
+			header("location:../Actor/Expert/ExpertPage.php");
 		}else if($row["m_status"] == "user") {
 			header("location:../Actor/User/UserPage.php");
 		}

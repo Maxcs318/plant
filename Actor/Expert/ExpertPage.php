@@ -9,11 +9,11 @@
 </head>
 <body>
     <?php require("../../ConnData/sessionNULL.php"); 
-        require("../../ConnData/sessionForMaster.php");
+        require("../../ConnData/sessionForExpert.php");
     ?>
     <div class="container">
         <center>
-            <h3> MASTER PAGE. </h3>
+            <h3> Expert PAGE. </h3>
         </center>
         <div class="row">
             <table width="100%" >

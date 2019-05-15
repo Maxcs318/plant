@@ -6,7 +6,6 @@
     <title>Home </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/css/style.css">
 
     <!-- <script src="bootstrap/js/bootstrap.min.js" ></script> -->
 </head>
@@ -18,32 +17,33 @@
         <div class="row">
             <?php require("ConnData/connectDB.php");?>
             <?php
-                $sql = "SELECT * FROM all_member ";
+                $sql = "SELECT * FROM member ";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     // output data of each row
                     ?>  <table style='width:100%'>
                             <tr>
                                 <th style='width:5%'>ID</th>
-                                <th style='width:10%'>Status</th>
                                 <th style='width:20%'>Firstname</th>
                                 <th style='width:20%'>Lastname</th>
-                                <th style='width:20%'>Password</th>
-                                <th style='width:10%'></th>
-                                <th style='width:5%'></th>
-                                <th style='width:10%'></th>
+                                <th style='width:15%'>E-mail</th>
+                                <th style='width:10%'>Phone</th>
+                                <th style='width:10%'>Username</th>
+                                <th style='width:10%'>Password</th>
+                                <th style='width:10%'>Status</th>
                             </tr>
                     <?php
                     while($row = $result->fetch_assoc()) {
                     ?>      <tr>
                                 <td><?php echo $row["m_id"];?></td>
-                                <td><?php echo $row["m_status"];?></td>
                                 <td><?php echo $row["m_firstname"];?></td>
                                 <td><?php echo $row["m_lastname"];?></td>
+                                <td><?php echo $row["m_email"];?></td>
+                                <td><?php echo $row["m_phone"];?></td>
+                                <td><?php echo $row["m_username"];?></td>
                                 <td><?php echo $row["m_password"];?></td>
-                                <td><button class="btn-primary form-control" type="" name="edit" onclick="window.location.href='pUpdate.php?getID=<?php echo $row["s_id"];?>'">Edit</button></td>
-                                <td></td>
-                                <td><button class="btn-danger form-control" type="" name="delete" onclick="deleteData(<?php echo $row['s_id'];?>)" >Delete</button></td>
+                                <td><?php echo $row["m_status"];?></td>
+                            
                             </tr>                        
                     <?php
                     }

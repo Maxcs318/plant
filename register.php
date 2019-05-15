@@ -8,7 +8,6 @@
     <title>Plant Disease</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="bootstrap/css/style.css"> -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="shortcut icon" href="img/leaficon.ico" type="image/x-icon" />
 
 </head>
@@ -16,7 +15,7 @@
 <body>
 <div class="container">
      
-    <form action="user.php" method="post"><br>
+    <form action="ConnData/InsertRegister.php" method="post"><br>
         <div class="row"> <!--row 1-->
     
         </div>

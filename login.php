@@ -5,22 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Plant Disease</title>
+    <title>Login</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/css/style.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap/css/style.css"> -->
     <link rel="shortcut icon" href="img/leaficon.ico" type="image/x-icon" />
 
 </head>
 
 <body>
-    
-    <form class="box" action="login.php" method="post">
-        <h1>LOGIN</h1>
-        <input type="text" placeholder="Username" maxlength="20">
-        <input type="password" placeholder="Password">
-        <input type="submit" value="Login">
+    <div class="container">
+    <form action="ConnData/check_login.php" method="post"><br>
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+                <center><h4>Login .</h4></center><hr>
+                <label id="first">User Name :</label><br/>
+                <input class="form-control" type="text" name="username" required><br/>
+
+                <label id="first">Password :</label><br/>
+                <input class="form-control" type="text" name="password" required><br/>
+
+                <button  class="btn-primary form-control col-3" id="insert" type="submit" name="save" style="float: right;"> sign in.</button>
+                <br><br>
+
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
     </form>
+    </div>
     
 </body>
 
