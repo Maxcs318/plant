@@ -17,7 +17,6 @@
 <div class="container">
      
     <form action="user.php" method="post"><br>
-        <center><h4>User Register. </h4></center><hr>
         <div class="row"> <!--row 1-->
     
         </div>
@@ -25,6 +24,7 @@
             <div class="col-4">                
             </div>
             <div class="col-4">
+                <center><h4>User Register. </h4></center><hr>
                 <label id="first">First Name :</label><br/>
                 <input class="form-control" type="text" name="firstname" required><br/>
 
