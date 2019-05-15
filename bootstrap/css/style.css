@@ -1,5 +1,5 @@
 body{
-    background: url(img/shutterstock_80565616.jpg);
+    background: url(../../img/background.jpg);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -47,7 +47,6 @@ body{
     border-radius: 50px;
     transition: 0.25s;
     font-weight: 500;
-
 }
 .box input[type= "text"]:focus,.box input[type="password"]:focus{
     width: 300px;

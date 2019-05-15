@@ -6,12 +6,14 @@
     <title>Home </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/style.css">
+
     <!-- <script src="bootstrap/js/bootstrap.min.js" ></script> -->
 </head>
 <body>
 
     <div class="container"> <br>    
-        <center><h4> All Member . <a href="index.php">Index</a></h4></center> <hr>
+        <center><h4> All Member . <a href="register.php">register</a></h4></center> <hr>
         <!-- Row 1 -->
         <div class="row">
             <?php require("ConnData/connectDB.php");?>
