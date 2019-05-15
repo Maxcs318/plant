@@ -6,6 +6,7 @@
     <title>Master</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/leaficon.ico" type="image/x-icon" />
 </head>
 <body>
     <?php require("../../ConnData/sessionNULL.php"); 

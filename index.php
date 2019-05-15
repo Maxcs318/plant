@@ -6,11 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Plant Disease</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="bootstrap/css/style.css"> -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="shortcut icon" href="img/leaficon.ico" type="image/x-icon" />
 </head>
-
 <body>
     <div class="container"><br>
         <center><h3>Plant Disease</h3></center> 

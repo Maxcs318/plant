@@ -3,11 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home </title>
+    <title>All_Member </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
-    <!-- <script src="bootstrap/js/bootstrap.min.js" ></script> -->
+    <link rel="shortcut icon" href="img/leaficon.ico" type="image/x-icon" />
 </head>
 <body>
 
