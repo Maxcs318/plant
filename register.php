@@ -14,27 +14,47 @@
 </head>
 
 <body>
+<div class="container">
      
-    <form class="box" action="user.php" method="post">
-    <a href="">User</a>
-     <a href="">Professor</a>
-        <h1>User Register</h1>
-        <br>
-        <p>Firstname</p>
-        <input type="text" placeholder="Firstname" maxlength="25">
-        <p>Lastname</p>
-        <input type="text" placeholder="Lastname" maxlength="25">
-        <p>E-mail</p>
-        <input type="text" placeholder="E-mail">
-        <p>Phone</p>
-        <input type="text" placeholder="Phone" maxlength="10">
-        <p>Username</p>
-        <input type="text" placeholder="Username" maxlength="20">
-        <p>Password</p>
-        <input type="password" placeholder="Password">
-        <input type="submit" value="Confirm">
-    </form>
+    <form action="user.php" method="post"><br>
+        <center><h4>User Register. </h4></center><hr>
+        <div class="row"> <!--row 1-->
     
+        </div>
+        <div class="row"> <!--row 2-->
+            <div class="col-4">                
+            </div>
+            <div class="col-4">
+                <label id="first">First Name :</label><br/>
+                <input class="form-control" type="text" name="firstname" required><br/>
+
+                <label id="first">Last Name :</label><br/>
+                <input class="form-control" type="text" name="lastname" required><br/>
+
+                <label id="first">E-mail :</label><br/>
+                <input class="form-control" type="email" name="email" required><br/>
+
+                <label id="first">Phone :</label><br/>
+                <input class="form-control" type="text" name="phone" required><br/>
+
+                <label id="first">User Name :</label><br/>
+                <input class="form-control" type="text" name="username" required><br/>
+
+                <label id="first">Passwowrd :</label><br/>
+                <input class="form-control" type="password" name="password" required><br/>
+                <br>
+                
+                <button  class="btn-primary form-control col-3" id="insert" type="submit" name="save" style="float: right;"> Save.</button>
+                <br><br>
+            </div>  
+            <div class="col-4">
+            </div>
+        </div>
+        <div class="row"> <!--row 3-->
+        
+        </div>
+    </form>
+</div>
 </body>
 
 </html>

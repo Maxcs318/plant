@@ -25,7 +25,9 @@
         
                         //Render image
                         header("Content-type: image/jpg"); 
-                        echo $imgData['image'];
+                        ?>
+                        <img src="data:image/jpeg;base64,<?php echo base64_encode($file) ?>" />
+                        <?php
                         
                     }
                 } else {
