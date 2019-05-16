@@ -1,40 +1,26 @@
 body{
     background: url(../../img/background.jpg);
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-.box-center{
-    margin: auto;
-    margin-top: 30%;
-    width: 100px;
-    padding: 0px;
-    align-items: center;
-    text-align: center;
-    border: 0px;
-    background: lightgray;
-    border-radius: 50px;
 }
 .box{
-    width: 600px;
-    padding: 40px;
+    width: 400px;
+    padding-top: 20px;
+    padding-bottom: 40px;  
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% ,-50%);
     background: lightgray;
-    /* opacity: 0.9; */
     text-align: center;
     border-radius: 50px;
     border: 5px solid darkgreen;
-    
 }
+
 .box h1{
     color: darkgreen;
     transform: uppercase; 
-    font-weight: 700;
+    font-weight: 500;
     font-size: 50px;
-    margin: auto;
+    margin: 20px auto;
 }
 .box input[type= "text"],.box input[type="password"],.box input[type="button"]{
     border: 0;
@@ -44,14 +30,14 @@ body{
     text-align: center;
     border: 4px solid darkgreen;
     padding: 14px 10px;
-    width: 200px;
+    width: 50%;
     outline: none;
     border-radius: 50px;
     transition: 0.25s;
     font-weight: 500;
 }
 .box input[type= "text"]:focus,.box input[type="password"]:focus{
-    width: 300px;
+    width: 70%;
     border-color: green;
     color: darkgreen;
     background: lightgreen;
@@ -59,22 +45,27 @@ body{
     font-weight: 500;
 }
 .box button[type="submit"]{
-    background: darkgreen;
+    background: green;
+    width: 40%;
     color: white;
-    margin-top: 20px;
+    margin: 10px;
     text-align: center;
-    border: 4px solid green;
-    /* padding: 14px 40px; */
-    outline: none;
+    border: 2px solid green;
+    padding: 5px;
     border-radius: 20px;
-    transition: 0.25s;
     cursor: pointer;
-    width: 20%;
     font-size: 15px;
 }
-p{
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
+.box button[type="submit"]:hover{
+    background: darkgreen;
+    width: 40%;
+    color: white;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid green;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
 }
 
