@@ -6,28 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/style.css">
     <link rel="shortcut icon" href="img/leaficon.ico" type="image/x-icon" />
 </head>
 <body>
     <div class="container">
-    <form action="ConnData/check_login.php" method="post"><br>
-        <div class="row">
-            <div class="col-4">
-            </div>
-            <div class="col-4">
-                <center><h4>Login .</h4></center><hr>
-                <label id="first">User Name :</label><br/>
-                <input class="form-control" type="text" name="username" required><br/>
+    <form action="ConnData/check_login.php" method="post">
+    
+        <div class="row box">
+            
+            <div class="col-12">
+                <h1>LOGIN</h1>
+                <p>User Name :</p>
+                <input class="form-control" type="text" name="username" required>
 
-                <label id="first">Password :</label><br/>
-                <input class="form-control" type="password" name="password" required><br/><br>
+                <p>Password :</p> 
+                <input class="form-control" type="password" name="password" required>
 
-                <button  class="btn-primary form-control col-4" id="insert" type="submit" name="save" style="float: right;"> sign in.</button>
-                <br><br>
-
-            </div>
-            <div class="col-4">
-            </div>
+                <button id="insert" type="submit" name="save"> sign in.</button>
+                
         </div>
     </form>
     </div>
