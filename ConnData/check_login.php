@@ -21,7 +21,8 @@ $row = $result->fetch_assoc();
 		$_SESSION["m_email"] = $row["m_email"];
 		$_SESSION["m_phone"] = $row["m_phone"];
 		$_SESSION["m_status"] = $row["m_status"];
-		
+		$_SESSION["m_username"] = $row["m_username"];
+
 		//Bla Bla Bla
 		session_write_close();
 		if($row["m_status"] == "admin"){
