@@ -20,7 +20,7 @@
                 <input class="form-control" type="text" name="username" required><br/>
 
                 <label id="first">Password :</label><br/>
-                <input class="form-control" type="text" name="password" required><br/><br>
+                <input class="form-control" type="password" name="password" required><br/><br>
 
                 <button  class="btn-primary form-control col-4" id="insert" type="submit" name="save" style="float: right;"> sign in.</button>
                 <br><br>
