@@ -24,7 +24,7 @@
                     <p>Password</p>
                     <input class="form-control" type="password" name="password" placeholder="password" required>
 
-                    <button id="insert" type="submit" name="save"> sign in.</button>
+                    <button id="insert" type="submit" name="save">sign in</button>
                 </form>
             </div>
 
