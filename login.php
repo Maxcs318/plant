@@ -15,22 +15,18 @@
     <div class="container box" >
         <div class="row">
 
-        <!-- <div class="col-xs-3 col-lg-3"></div> -->
-
             <div class="col-xs-12 col-lg-12">
                 <form action="ConnData/check_login.php" method="post">
                     <h1>LOGIN</h1>
-                    <p>User Name :</p>
+                    <p>User Name</p>
                     <input class="form-control" type="text" name="username" placeholder="username" required>
 
-                    <p>Password :</p>
+                    <p>Password</p>
                     <input class="form-control" type="password" name="password" placeholder="password" required>
 
                     <button id="insert" type="submit" name="save"> sign in.</button>
                 </form>
             </div>
-
-            <!-- <div class="col-xs-3 col-lg-3"></div> -->
 
         </div><!--end row --> 
     </div>

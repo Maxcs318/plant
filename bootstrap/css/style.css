@@ -1,5 +1,9 @@
 body{
-    background: url(../../img/background.jpg);
+    background: url(../../img/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .box{
     width: 400px;
@@ -12,23 +16,24 @@ body{
     background: lightgray;
     text-align: center;
     border-radius: 50px;
-    border: 5px solid darkgreen;
+    opacity: 0.9;
 }
 
 .box h1{
-    color: darkgreen;
+    color: green;
     transform: uppercase; 
     font-weight: 500;
     font-size: 50px;
     margin: 20px auto;
 }
+/* input */
 .box input[type= "text"],.box input[type="password"],.box input[type="button"]{
     border: 0;
     background: none;
     display: block;
     margin: 10px auto;
     text-align: center;
-    border: 4px solid darkgreen;
+    border: 2px solid green;
     padding: 14px 10px;
     width: 50%;
     outline: none;
@@ -36,17 +41,18 @@ body{
     transition: 0.25s;
     font-weight: 500;
 }
+/* input focus */
 .box input[type= "text"]:focus,.box input[type="password"]:focus{
     width: 70%;
     border-color: green;
     color: darkgreen;
-    background: lightgreen;
     font-size: 20px;
     font-weight: 500;
 }
+/* button */
 .box button[type="submit"]{
     background: green;
-    width: 40%;
+    width: 30%;
     color: white;
     margin: 10px;
     text-align: center;
@@ -56,16 +62,14 @@ body{
     cursor: pointer;
     font-size: 15px;
 }
+/* button hover */
 .box button[type="submit"]:hover{
     background: darkgreen;
-    width: 40%;
-    color: white;
-    margin: 10px;
-    text-align: center;
-    border: 2px solid green;
-    padding: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 15px;
+}
+p{
+    color: darkgreen;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0px;
 }
 
