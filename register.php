@@ -16,13 +16,13 @@
 
 <body>
 
-    <!-- register tab -->
-    <div class="tab" style="margin-top: 40px;">
-        <button class="tablinks active" onclick="openCity(event, 'user')">User Register</button>
-        <button class="tablinks" onclick="openCity(event, 'expert')">Expert Register</button>
-    </div>
-    <!-- end register tab -->
     <div class="container">
+        <!-- register tab -->
+        <div class="tab" style="margin-top: 40px;">
+            <button class="tablinks active" onclick="openCity(event, 'user')">User Register</button>
+            <button class="tablinks" onclick="openCity(event, 'expert')">Expert Register</button>
+        </div>
+        <!-- end register tab -->
         <form action="ConnData/InsertRegister.php" method="post">
 
             <div class="row">
@@ -36,7 +36,7 @@
                         <input class="form-control" type="text" name="lastname" placeholder="last name" maxlength="25" required>
 
                         <p>E-mail</p>
-                        <input class="form-control" type="email" name="email" placeholder="example@plant.com"required>
+                        <input class="form-control" type="email" name="email" placeholder="example@plant.com" required>
 
                         <p>Phone</p>
                         <input class="form-control" name='s_money' id='s_money' type='text' maxlength="10" placeholder="number 0-9" required onKeyUp="if(this.value*1!=this.value) this.value='' ;">
@@ -51,8 +51,8 @@
                         <button id="insert" type="submit" name="save">Save</button>
                 </div>
             </div>
-</form>
-<form action="ConnData/InsertRegister.php" method="post">
+        </form>
+        <form action="ConnData/InsertRegister.php" method="post">
             <!-- expert register -->
             <div class="row">
                 <div id="expert" class="col-xs-12 col-lg-12 box" style="display: none">
@@ -78,8 +78,8 @@
                         <input type="hidden" name="status" value="expert">
                         <button id="insert" type="submit" name="save">Save</button>
                 </div>
-</form>
-    </div>
+        </form>
+    </div><!-- end container -->
 
     <!-- Togglable Script -->
     <script>
