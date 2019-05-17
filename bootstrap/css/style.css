@@ -7,14 +7,16 @@ body {
 }
 
 .box {
-  width: 450px;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  width: 400px;
+  height: auto;
+  padding-top: 0px;
+  padding-bottom: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: lightgray;
+  float: center;
   text-align: center;
   border-radius: 50px;
   opacity: 0.9;
@@ -35,7 +37,7 @@ body {
 .box input[type="password"],
 .box input[type="email"],
 .box input[type="number"] {
-  border: 0;
+  border: 0;  
   background: none;
   display: block;
   margin: 10px auto;
@@ -86,6 +88,7 @@ p {
   font-weight: 500;
   margin: 0px;
 }
+
 .tab{
   float: none;
   position: absolute;
@@ -94,6 +97,7 @@ p {
   margin: 0px;
   border: 2px solid green;
 }
+
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
@@ -117,8 +121,8 @@ p {
 .tab button.active {
   background-color: green;
   color: white;
-  font-weight: 400;
 }
+
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
