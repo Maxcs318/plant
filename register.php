@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="bootstrap/css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 9000px;)">
     <link rel="shortcut icon" href="img/leaficon.ico" type="image/x-icon" />
-
+    <link href="https://fonts.googleapis.com/css?family=Prompt|Sriracha&display=swap" rel="stylesheet">
 </head>
 
 <body>

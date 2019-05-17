@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/css/style.css">
     <link rel="shortcut icon" href="img/leaficon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Prompt|Sriracha&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container box">
 
-        <div class="row box">
+        <div class="row">
             <h1>Plant Disease</h1>
             
             <div class="col-xs-12 col-sm-12 col-lg-12">
