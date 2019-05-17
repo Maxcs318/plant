@@ -10,6 +10,7 @@
     <title>Plant Disease</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 9000px;)">
     <link rel="shortcut icon" href="img/leaficon.ico" type="image/x-icon" />
 
 </head>
@@ -27,7 +28,8 @@
         <!-- user register -->
             <form action="ConnData/InsertRegister.php" method="post">
                 <div class="row">
-                    <div id="user" class="col-xs-4 col-lg-12 box">
+                    <div class="col-4"></div>
+                    <div id="user" class="col-xs-4 col-lg-4 box">
                         <h1>User Register</h4>
                             <p>First Name</p>
                             <input class="form-control" type="text" name="firstname" placeholder="first name" maxlength="25" required>
@@ -50,12 +52,14 @@
                             <input type="hidden" name="status" value="user">
                             <button id="insert" type="submit" name="save">Save</button>
                     </div>
+                    <div class="col-4"></div>
                 </div>
             </form>
 
             <form action="ConnData/InsertRegister.php" method="post">
                 <div class="row">
-                    <div id="expert" class="col-xs-4 col-lg-12 box" style="display: none">
+                <div class="col-4"></div>
+                    <div id="expert" class="col-xs-4 col-lg-4 box" style="display: none">
                         <h1>Expert Register</h4>
                             <p>First Name</p>
                             <input class="form-control" type="text" name="firstname" placeholder="first name" required>
@@ -81,6 +85,7 @@
                             <input type="hidden" name="status" value="expert">
                             <button id="insert" type="submit" name="save">Save</button>
                     </div>
+                    <div class="col-4"></div>
                 </div>
             </form>
         <!-- expert register -->

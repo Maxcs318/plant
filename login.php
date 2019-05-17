@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <div class="container box" >
+    <div class="container box">
         <div class="row">
-
+           
             <div class="col-xs-12 col-lg-12">
                 <form action="ConnData/check_login.php" method="post">
                     <h1>LOGIN</h1>
@@ -27,8 +27,9 @@
                     <button id="insert" type="submit" name="save">sign in</button>
                 </form>
             </div>
-
-        </div><!--end row --> 
+            
+        </div>
+        <!--end row -->
     </div>
 </body>
 

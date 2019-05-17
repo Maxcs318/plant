@@ -12,17 +12,17 @@
 </head>
 
 <body>
-    <div class="container box">
+    <div class="container">
 
-        <div class="row">
-
+        <div class="row box">
+            <h1>Plant Disease</h1>
+            
             <div class="col-xs-12 col-lg-12">
-                <h1>Plant Disease</h1>
                 <button type="submit" onclick="window.location.href='login.php'">Login</button>
                 <br>
                 <button type="submit" onclick="window.location.href='register.php'">Register</button>
             </div>
-
+       
         </div>
     </div>
 </body>
