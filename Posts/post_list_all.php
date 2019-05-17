@@ -16,7 +16,7 @@
         <div class="row">
             <?php require("../ConnData/connectDB.php");?>
             <?php
-                $sql = "SELECT * FROM image_of_post INNER JOIN posts ON posts.p_linkimage = image_of_post.iop_linkpost;";
+                $sql = "SELECT * FROM posts ";
                 
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
@@ -28,10 +28,10 @@
                         echo $row["p_date"]."<br>";
                         echo $row["p_own"]."<br>";
                         echo $row["p_linkimage"]."<br>";
-                        echo $row["iop_id"]."<br>";
-                        echo $row["iop_name"]."<br>";
+                        // echo $row["iop_id"]."<br>";
+                        // echo $row["iop_name"]."<br>";
                         ?>
-                        <img src="../image_file_post/<?php echo $row["iop_name"];?>" >
+                        <!-- <img src="../image_file_post/<?php echo $row["iop_name"];?>" > -->
                         <?php
                         echo "<br>";
 

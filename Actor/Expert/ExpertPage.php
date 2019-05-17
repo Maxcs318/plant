@@ -32,7 +32,8 @@
             
         </div>        
         <div class="row">
-            <div class="col-4">
+            <div class="col-4"> <br>
+                <a href="../../Posts/post_form.php"><button class="btn-primary form-control ">Post.</button></a>
             </div>
             <div class="col-4">
             </div>
