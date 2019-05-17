@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-    <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="jquery.alphanumeric.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -20,7 +18,6 @@
     <div class="container">
 
         <!-- user register -->
-        <form action="ConnData/InsertRegister.php" method="post">
             <div class="row">
                 <div class="col-xs-4 col-sm-4 col-md-4"></div>
                 
@@ -28,6 +25,8 @@
                 
                     <h1>User Register</h4>
                     <button class="tablinks tab " onclick="openCity(event, 'expert')">Expert Register</button>
+                    <form action="ConnData/InsertRegister.php" method="post">
+
                         <p>First Name</p>
                         <input class="form-control" type="text" name="firstname" placeholder="first name" maxlength="25" required>
 
@@ -53,7 +52,6 @@
             </div>
         </form>
 
-        <form action="ConnData/InsertRegister.php" method="post">
             <div class="row">
                 
                 <div class="col-xs-4 col-sm-4 col-md-4"></div>
@@ -61,6 +59,8 @@
                 
                     <h1>Expert Register</h4>
                     <button class="tablinks tab  active" onclick="openCity(event, 'user')">User Register</button>
+                    <form action="ConnData/InsertRegister.php" method="post">
+
                         <p>First Name</p>
                         <input class="form-control" type="text" name="firstname" placeholder="first name" required>
 

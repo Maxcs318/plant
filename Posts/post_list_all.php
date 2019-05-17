@@ -14,10 +14,8 @@
         <div class="row">
             <?php require("../ConnData/connectDB.php");?>
             <?php
-                $sql = " SELECT * FROM posts 
-                LEFT JOIN image_of_post
-                ON posts.p_linkimage=image_of_post.iop_linkpost
-                ORDER BY p_id ";
+                $sql = " SELECT * FROM posts LEFT JOIN image_of_post 
+                ON posts.p_linkimage=image_of_post.iop_linkpost ORDER BY p_id ";
                 
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
@@ -25,37 +23,34 @@
                     $check_post = 0;
                     $check_post2 = 0;
                     while($row = $result->fetch_assoc()) {
-                        echo "<div class='col-12'>"; // div start
                         if($check_post != $row["p_linkimage"]){
                             $check_post = $row["p_linkimage"];
+                            echo "<div class='col-12'>"; // div start
 
-
-                            // if($check_post2 != $row["p_linkimage"]){
-                            //     $check_post2 = $row["p_linkimage"];
-                            
-                                echo $row["p_id"]."<br>"; 
-                                echo $row["p_header"]."<br>";
-                                echo $row["p_detail"]."<br>";
-                                echo $row["p_date"]."<br>";
-                                echo $row["p_own"]."<br>";
-                                echo $row["p_linkimage"]."<br>";
-                                echo $row["iop_id"]."<br>";
-                                echo $row["iop_name"]."<br>";
-                                
-                            // }
-                        ?>
-                            <img src="../image_file_post/<?php echo $row["iop_name"];?>" height="42" width="42" >
-                        <?php
-                            
+                            echo $row["p_id"]."<br>"; 
+                            echo $row["p_header"]."<br>";
+                            echo $row["p_detail"]."<br>";
+                            echo $row["p_date"]."<br>";
+                            echo $row["p_own"]."<br>";
+                            echo $row["p_linkimage"]."<br>";
+                            echo $row["iop_id"]."<br>";
+                            echo $row["iop_name"]."<br>";
+                            if($row["iop_name"]!=''){ 
+                            ?>
+                                <img src="../image_file_post/<?php echo $row["iop_name"];?>" height="100" width="100" >
+                            <?php
+                            } else{
+                                echo "</div>";
+                            }
                         }else{
                             echo $row["iop_id"]."<br>";
                             echo $row["iop_name"]."<br>";
-                        ?>
-                            <img src="../image_file_post/<?php echo $row["iop_name"];?>" height="42" width="42" >
-                        <?php 
+                            ?>
+                                <img src="../image_file_post/<?php echo $row["iop_name"];?>" height="100" width="100" >
+                            <?php 
+                        
                         }
-                        echo "</div>"; // div end
-
+                        
                     }
                 } else {
                     echo "0 results";
