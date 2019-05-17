@@ -30,16 +30,13 @@
 
                     <label id="first">Upload Photo :</label><br />
                     <input type="file" name="image[]" id="image"> <br><br>
-                    <label id="first">Upload Photo 2 :</label><br />
-                    <input type="file" name="image[]" id="image">
+                    <p></p> 
+                    <input type="button" value="Add Image." id="add_image1">
+
                     <input type="hidden" name="own" value="<?php echo $_SESSION["m_id"]; ?>">
                     <input type="hidden" name="date" value="<?php echo date("Y-m-d H:i:s", time() + (60 * 60) * 5); ?>">
                     <br>
-                    <!-- ++ button ++ -->
-                    <button id="btn-sayhi">
-                        +
-                    </button>
-                    <!-- ++ button ++ -->
+                    
                     <?php
                     function generateRandomString($length = 30)
                     {
@@ -65,47 +62,11 @@
     </div>
 
     <!-- script + function -->
+    <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+
     <script>
-        $(document).ready(function() {
-            $('#btn-show').click(function() {
-                personData.forEach(function(data, i) {
-                    $('#table-data tbody').append(
-                        '<tr>' +
-                        '<td>' + (i + 1) + '</td>' +
-                        '<td>' + data.name + '</td>' +
-                        '<td>' + data.age + '</td>' +
-                        '<td>' + data.gender + '</td>' +
-                        '<td>' + data.address.city + '</td>' +
-                        '<td>' + data.address.country + '</td>' +
-                        '</tr>'
-                    )
-                });
-            });
-
-            $('h1').append('<i> Append ,</i>');
-            $('h1').prepend('<i> Prepend ,</i>');
-            $('h1').after('<i> After ,</i>');
-            $('h1').before('<i> Before ,</i>');
-
-            $('#btn-sayhi').click(function() {
-                $('#show-data').append('<li> + </li>');
-
-            });
-            $('#btn-last').click(function() {
-                $("#show-data li").last().remove();
-
-            });
-            $('#btn-remove').click(function() {
-                $("#show-data li").remove();
-            });
-
-            $('#btn-input').click(function() {
-                var name = $('#first').val();
-                var lastname = $('#last').val();
-                var age = $('#age').val();
-                $('#show-input').text('Name : ' + name + ' , LastName : ' + lastname + ' , Age : ' + age);
-            });
-
+        $('#add_image1').click(function(){
+            $('p').append('<input type="file" name="image[]" id="image"><br><br>');
         });
     </script>
 
