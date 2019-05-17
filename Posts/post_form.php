@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 </head>
 <body>
+<?php session_start(); ?>
     <div class="container">
         <form action="../ConnData/InsertPost.php" method="post" enctype="multipart/form-data"> 
         <div class="row">
@@ -25,7 +26,6 @@
                 <input type="file" name="image[]" id="image" > <br><br>
                 <label id="first">Upload Photo 2 :</label><br/>
                 <input type="file" name="image[]" id="image" >
-                <?php session_start(); ?>
                 <input type="hidden" name="own" value="<?php echo $_SESSION["m_id"]; ?>">
                 <input type="hidden" name="date" value="<?php echo date("Y-m-d H:i:s",time()+ (60*60)*5 ); ?>">
                 <br>
