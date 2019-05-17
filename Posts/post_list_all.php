@@ -16,19 +16,26 @@
         <div class="row">
             <?php require("../ConnData/connectDB.php");?>
             <?php
-                $sql = "SELECT * FROM posts WHERE p_image";
+                $sql = "SELECT * FROM image_of_post INNER JOIN posts ON posts.p_linkimage = image_of_post.iop_linkpost;";
+                
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                        $imgData = $result->fetch_assoc();
-        
-                        //Render image
-                        header("Content-type: image/jpg"); 
+                        echo $row["p_id"]."<br>"; 
+                        echo $row["p_header"]."<br>";
+                        echo $row["p_detail"]."<br>";
+                        echo $row["p_date"]."<br>";
+                        echo $row["p_own"]."<br>";
+                        echo $row["p_linkimage"]."<br>";
+                        echo $row["iop_id"]."<br>";
+                        echo $row["iop_name"]."<br>";
                         ?>
-                        <img src="data:image/jpeg;base64,<?php echo base64_encode($file) ?>" />
+                        <img src="../image_file_post/<?php echo $row["iop_name"];?>" >
                         <?php
-                        
+                        echo "<br>";
+
+
                     }
                 } else {
                     echo "0 results";

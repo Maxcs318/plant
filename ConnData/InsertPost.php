@@ -1,29 +1,37 @@
 <?php require("connectDB.php");?>
+
 <?php
-    $sql = "INSERT INTO posts (p_name, p_detail, p_image, p_own, p_date) VALUES ('".$_POST['header']."'
-    ,'".$_POST['detail']."','".$_POST['image']."','".$_POST['own']."','".$_POST['date']."')";
+    $sql = "INSERT INTO posts (p_header, p_detail, p_own, p_date, p_linkimage) 
+    VALUES ('".$_POST['header']."','".$_POST['detail']."','".$_POST['own']."','".$_POST['date']."','".$_POST['key_post_image']."')";
     if ($conn->query($sql) === TRUE) {
-        header("location:../allMember.php");
+        // header("location:../allMember.php");      
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
-    // if (isset($_POST['Submit'])) {
-    //     move_uploaded_file($_FILES["image"]["tmp_name"],"uploads/" . $_FILES["image"]["name"]);			
-    //     $image=$_FILES["image"]["name"];
-    //     $name=$_POST['header'];
-    //     $detail=$_POST['detail'];
-    //     $own=$_POST['own'];
-    //     $date=$_POST['dedatetail'];
-         
-    //     // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //     $sql = "INSERT INTO posts (p_name, p_detail, p_image, p_own, p_date) 
-    //     VALUES ('$name','$detail','$image','$own','$date')";
-         
-    //     $conn->exec($sql);
-    //     echo "<script>alert('Successfully Added!!!'); window.location='../index.php'</script>";
-    // }
-
     $conn->close();
-    
+?>
+<?php
+for($i=0;$i<count($_FILES["image"]["name"]);$i++)
+{
+	if($_FILES["image"]["name"][$i] != "")
+	{   
+        $newfilename= date('dmYHis').str_replace(" ", "", basename($_FILES["image"]["name"][$i]));
+		if(move_uploaded_file($_FILES["image"]["tmp_name"][$i],"../image_file_post/".$newfilename))
+		{
+            // echo "Copy/Upload Complete<br>  ".$newfilename."<br>";
+            require("connectDB.php");
+            $sql = "INSERT INTO image_of_post (iop_name, iop_linkpost) 
+            VALUES ('$newfilename','".$_POST['key_post_image']."')";
+            if ($conn->query($sql) === TRUE) {
+                // header("location:../allMember.php");      
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+            $conn->close();
+
+        }
+	}
+}
+    header("location:../Posts/post_list_all.php");      
+
 ?>
