@@ -17,7 +17,7 @@
         <div class="row box">
             <h1>Plant Disease</h1>
             
-            <div class="col-xs-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
                 <button type="submit" onclick="window.location.href='login.php'">Login</button>
                 <br>
                 <button type="submit" onclick="window.location.href='register.php'">Register</button>

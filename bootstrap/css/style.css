@@ -146,7 +146,7 @@ p {
   }
 }
 
-@media screen and (max-width: 425px , max-height 700px) {
+@media screen and (max-width: 800px) {
   div.tab {
     width: 40%;
     height: auto;
@@ -162,9 +162,13 @@ p {
   }
 
   div.box {
-    width: 425px;
-    margin-top: 30px;
+    max-width: auto;
+    width: 100%;
+    margin: auto;
+    max-height: auto;
+    height: 100%;
     background: none;
+    opacity: 1.0;
   }
 
   div.box h1 {

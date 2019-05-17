@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-xs-4 col-sm-4 col-md-4"></div>
                 
-                <div id="user" class="col-xs-4 col-sm-4 col-md-4 box">
+                <div id="user" class="box col-xs-4 col-sm-12 col-md-4">
                 
                     <h1>User Register</h4>
                     <button class="tablinks tab " onclick="openCity(event, 'expert')">Expert Register</button>
