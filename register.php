@@ -37,7 +37,7 @@
                         <input class="form-control" type="email" name="email" placeholder="example@plant.com" required>
 
                         <p>Phone</p>
-                        <input class="form-control" name='s_money' id='s_money' type='text' maxlength="10" placeholder="number 0-9" required onKeyUp="if(this.value*1!=this.value) this.value='' ;">
+                        <input class="form-control" name='phone' type='text'  placeholder="number 0-9" value="" OnKeyPress="return chkNumber(this)" required="" minlength="10" maxlength="10">
 
                         <p>User Name</p>
                         <input class="form-control" type="text" name="username" placeholder="username" maxlength="10" required>
@@ -46,7 +46,7 @@
                         <input class="form-control" type="password" name="password" placeholder="password" maxlength="10" required>
 
                         <input type="hidden" name="status" value="user">
-                        <button id="insert" type="submit" name="save">Save</button>
+                        <button  type="submit" name="save">Save</button>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-4"></div>
             </div>
@@ -71,7 +71,7 @@
                         <input class="form-control" type="email" name="email" placeholder="example@plant.com" required>
 
                         <p>Phone</p>
-                        <input class="form-control" name='s_money' id='s_money' type='text' size='10' placeholder="number 0-9" required onKeyUp="if(this.value*1!=this.value) this.value='' ;">
+                        <input class="form-control" name='phone' type='text'  placeholder="number 0-9" value="" OnKeyPress="return chkNumber(this)" required="" minlength="10" maxlength="10">
 
                         <p>Certificate</p>
                         <input class="form-control" type="text" name="certificate" placeholder="certificate" required>
@@ -83,7 +83,7 @@
                         <input class="form-control" type="password" name="password" placeholder="password" required>
 
                         <input type="hidden" name="status" value="expert">
-                        <button id="insert" type="submit" name="save">Save</button>
+                        <button type="submit" name="save">Save</button>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-4"></div>
             </div>
@@ -93,20 +93,12 @@
     </div>
 
     <!-- Togglable Script -->
-    <script>
-        function openCity(evt, cityName) {
-            var i, box, tablinks;
-            box = document.getElementsByClassName("box");
-            for (i = 0; i < box.length; i++) {
-                box[i].style.display = "none";
+    <script language="JavaScript">
+            function chkNumber(ele){
+            var vchar = String.fromCharCode(event.keyCode);
+            if ((vchar<'0' || vchar>'9') && (vchar != '.')) return false;
+            ele.onKeyPress=vchar;
             }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
     </script>
     <!-- End Togglable Script -->
 

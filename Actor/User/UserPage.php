@@ -42,6 +42,11 @@
                 <a href="../../ConnData/logout.php"><button class="btn-danger form-control">Log Out.</button></a>    
             </div>
         </div>
+        <div class="row">
+            <div class="col-4"> <br>
+                <a href="../../Posts/post_list_person.php"><button class="btn-primary form-control ">See My Post.</button></a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
