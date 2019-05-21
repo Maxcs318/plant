@@ -13,17 +13,17 @@
 </head>
 
 <body>
-    <div class="container box">
+    <div class="container">
 
         <div class="row">
-            <h1>Plant Disease</h1>
-            
-            <div class="col-xs-12 col-sm-12 col-lg-12">
+           
+            <div class="col-xs-4 col-sm-4 col-md-4 box"> 
+                <h1>Plant Disease</h1>
                 <button type="submit" onclick="window.location.href='login.php'">Login</button>
                 <br>
                 <button type="submit" onclick="window.location.href='register.php'">Register</button>
             </div>
-       
+        
         </div>
     </div>
 </body>
