@@ -13,10 +13,7 @@
             <div class="col-12"><br>
             <center><h4> Post All . <a href="../index.php">Index</a></h4></center>
             </div>
-        </div>
-        <!-- Row 2 -->
-        <!-- <div class="row"> -->
-            
+        </div>            
             <?php require("../ConnData/connectDB.php");?>
             <?php
                 $sql = " SELECT * FROM posts LEFT JOIN image_of_post 
@@ -60,8 +57,6 @@
                     echo "0 results";
                 }
             ?>
-        <!-- </div> -->
-    
     </div>
     <?php $conn->close(); ?>    
 </body>
