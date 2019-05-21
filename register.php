@@ -37,7 +37,7 @@
                         <input class="form-control" type="email" name="email" placeholder="example@plant.com" required>
 
                         <p>Phone</p>
-                        <input class="form-control" name='phone' type='text'  placeholder="number 0-9" value="" OnKeyPress="return chkNumber(this)" required="" minlength="10" maxlength="10">
+                        <input class="form-control" name='phone' type='text'  placeholder="number 0-9" value="" OnKeyPress="return chkNumber(this)" required="" maxlength="10">
 
                         <p>User Name</p>
                         <input class="form-control" type="text" name="username" placeholder="username" maxlength="10" required>
