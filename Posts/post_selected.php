@@ -51,12 +51,9 @@
                     // output data of each row
                     echo '<div class="row">';
                     while($row = $result->fetch_assoc()) {                        
-                        // echo $row["p_id"]."<br>"; 
                         echo $row["p_header"]."<br>";
                         echo $row["p_detail"]."<br>";
-                        echo $row["p_date"]."<br>";
-                        // echo $row["p_own"]."<br>";
-                        // echo $row["p_linkimage"]."<br>";                                      
+                        echo $row["p_date"]."<br>";                                
                     }
                     echo '</div>';
                 } else {
@@ -64,13 +61,42 @@
                 }
             ?>
 <?php $conn->close(); ?>    
+<hr>
+<?php require("../ConnData/connectDB.php");?>
+<?php
+                $sql = " SELECT * FROM comment LEFT JOIN member
+                ON member.m_id=comment.c_own
+                WHERE c_linkpost='".$_GET["getPostID"]."' ";
+                
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    
+                    while($row = $result->fetch_assoc()) {  
+                        echo '<div class="row">
+                                <div class="col-12">';
+                        echo $row["m_username"]."<br>";                      
+                        echo $row["c_detail"]."<br>";
+                        if($row["c_confirm"]!=''){
+                        echo "Your plant is a ".$row["c_confirm"]." disese <br>";
+                        }
+                        echo $row["c_date"]."<br>"; 
+                        echo '  </div>
+                             </div> <hr>';                                  
+                    }
+                } else {
+                    echo "0 Comment .";
+                }
+            ?>
+<?php $conn->close(); ?>
+
     <?php 
     if($_SESSION["m_status"]=='expert'){
-        ?><hr>
+        ?>
         <form action="../ConnData/InsertComment.php" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-12">
-                    <select class="form-control col-3" name="confirm" style="float: right;">
+                    <select class="form-control col-3" name="commentconfirm" style="float: right;">
                         <option value="A">Disease A</option>
                         <option value="B">Disease B</option>
                         <option value="No" >Not a Disease</option>
@@ -80,6 +106,7 @@
             </div><br>
             <div class="row">
                 <div class="col-12">
+                <input type="hidden" name="id_linkpost" value="<?php echo $_GET["getPostID"]; ?>">
                 <input type="hidden" name="commentown" value="<?php echo $_SESSION["m_id"]; ?>">
                 <input type="hidden" name="commentdate" value="<?php echo date("Y-m-d H:i:s", time() + (60 * 60) * 5); ?>">
                 <textarea rows="4" class="form-control" name="commentdetail" > </textarea>
@@ -90,8 +117,7 @@
                     <button class="btn-primary form-control col-3" type="submit" style="float: right;">Comment.</button>
                 </div>
             </div>
-        </form>
-        <hr>
+        </form><br>
         <?php
     }
     
