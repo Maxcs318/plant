@@ -20,15 +20,16 @@
                 $sql = " SELECT * FROM posts  LEFT JOIN image_of_post 
                 ON posts.p_linkimage=image_of_post.iop_linkpost
                 WHERE posts.p_own = ".$_SESSION['m_id']." 
-                ORDER BY p_id ";
+                ORDER BY p_id DESC ";
                 
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     // output data of each row
-                    $check_post = 0;
+                    $check_post = 'a';
                     while($row = $result->fetch_assoc()) {
                         
                         if($check_post!=$row["p_linkimage"]){
+                            $check_post=$row["p_linkimage"];
                             ?>
                             <div class="row" onclick="window.location.href='post_selected.php?getPostID=<?php echo $row["p_id"];?>'">
                             <div class="col-2">
@@ -54,10 +55,7 @@
                                 </div>
                             </div><hr>
                             <?php
-                            $check_post=$row["p_linkimage"];
-                        }else{
-
-                        }                                            
+                        }                                       
                     }
                 } else {
                     echo "0 results";

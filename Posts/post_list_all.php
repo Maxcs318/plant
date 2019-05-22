@@ -17,12 +17,12 @@
             <?php require("../ConnData/connectDB.php");?>
             <?php
                 $sql = " SELECT * FROM posts LEFT JOIN image_of_post 
-                ON posts.p_linkimage=image_of_post.iop_linkpost ORDER BY p_date ASC ";
+                ON posts.p_linkimage=image_of_post.iop_linkpost ORDER BY p_date DESC ";
                 
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     // output data of each row
-                    $check_post = 0;
+                    $check_post = 'a';
                     while($row = $result->fetch_assoc()) {
                         if($check_post!=$row["p_linkimage"]){
                         $check_post=$row["p_linkimage"];
