@@ -1,3 +1,14 @@
+body {
+    background: url(../../img/background.jpg) center center fixed;
+    font-family: 'Kanit', sans-serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.main{
+    left: 300px;
+}
 .topnav {
     overflow: hidden;
     background-color: #5cb55f;
@@ -84,6 +95,7 @@ h1 {
     margin-right: 10px;
     font-size: 15px;
 }
+
 textarea.form-control{
     background-color: #d3f3ad;
 }
@@ -96,3 +108,51 @@ input[type="text"]{
 input[type="text"]:focus{
     background-color: #d3f3ad;
 }
+
+.sidenav {
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #c5c4c2;
+    border: 2px solid black;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .imgcenter{
+    float: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+  }
+
+  .text-line{
+    text-align:center; 
+    border:none; 
+    background-color: green; 
+    font-size: 30px;color: white;
+    margin: auto; 
+    padding: 7px;
+  }
+.textimg{
+    margin: 10px;
+    text-align:center;
+    font-size:25px;
+    font-weight: 600;
+    border:none;
+    color: black;
+  }
+.textimg:hover{
+    color: darkgreen;
+}
+  a:hover{
+    text-decoration: none;
+  }

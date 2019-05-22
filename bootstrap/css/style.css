@@ -1,6 +1,5 @@
 body {
-  background: url(../../img/background.jpg) no-repeat center center fixed;
-  font-family: 'Sriracha', cursive;
+  background: url(../../img/background.jpg) center center fixed;
   font-family: 'Prompt', sans-serif;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -183,6 +182,6 @@ p {
   input[type="password"]:focus {
     background-color: lightgray;
   }
-
 }
+
 

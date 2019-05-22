@@ -30,7 +30,7 @@
     <a href=""  class="float-right">Classify Plant</a>
     <a href="#contact" class="float-right">My Post</a>
         <a class="float-right active" href="#about">Post</a>
-        <a href="#home" class="float-right">Home</a>
+        <a href="#" class="float-right">Home</a>
 
         <div class="search-container">
             <!-- <form action="/action_page.php">
