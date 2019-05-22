@@ -115,7 +115,7 @@
             </div>
 
             <div class="col-xs-12 col-md-4">
-                <a href="../../login.php">
+                <a href="../../ConnData/logout.php">
                     <button type="submit" class="imgcenter" style="border: 0; background: transparent">
                         <img src="../../img/pageicon/logout.png" class="imgcenter">
                         <p class="textimg">Log out</p>
