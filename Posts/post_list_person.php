@@ -19,7 +19,7 @@
             <?php
                 $sql = " SELECT * FROM posts  LEFT JOIN image_of_post 
                 ON posts.p_linkimage=image_of_post.iop_linkpost
-                WHERE posts.p_own=".$_SESSION["m_id"]."
+                WHERE posts.p_own = ".$_SESSION['m_id']." 
                 ORDER BY p_id ";
                 
                 $result = $conn->query($sql);
@@ -29,32 +29,34 @@
                     while($row = $result->fetch_assoc()) {
                         
                         if($check_post!=$row["p_linkimage"]){
-                        ?>
-                        <div class="row" onclick="window.location.href='post_selected.php?getPostID=<?php echo $row["p_id"];?>'">
-                        <div class="col-2">
-                        <?php
-                            if($row["iop_name"]!=''){
-                            ?>  
-                            <img src="../image_file_post/<?php echo $row["iop_name"];?>" width="100%" ><br>
+                            ?>
+                            <div class="row" onclick="window.location.href='post_selected.php?getPostID=<?php echo $row["p_id"];?>'">
+                            <div class="col-2">
                             <?php
-                        }
-                        ?>
-                        </div>
-                        <div class="col-10">
-                        <?php
-                        echo $row["p_id"]."<br>"; 
-                        echo $row["p_header"]."<br>";
-                        echo $row["p_detail"]."<br>";
-                        echo $row["p_date"]."<br>";
-                        echo $row["p_own"]."<br>";
-                        // echo $row["p_linkimage"]."<br>";
-                        // echo $row["iop_id"]."<br>";
-                        // echo $row["iop_name"]."<br>";   
-                        ?>
+                                if($row["iop_name"]!=''){
+                                ?>  
+                                <img src="../image_file_post/<?php echo $row["iop_name"];?>" width="100%" ><br>
+                                <?php
+                                }
+                            ?>
                             </div>
-                        </div><hr>
-                        <?php
-                        $check_post=$row["p_linkimage"];
+                            <div class="col-10">
+                            <?php
+                            echo $row["p_id"]."<br>"; 
+                            echo $row["p_header"]."<br>";
+                            echo $row["p_detail"]."<br>";
+                            echo $row["p_date"]."<br>";
+                            echo $row["p_own"]."<br>";
+                            // echo $row["p_linkimage"]."<br>";
+                            // echo $row["iop_id"]."<br>";
+                            // echo $row["iop_name"]."<br>";   
+                            ?>
+                                </div>
+                            </div><hr>
+                            <?php
+                            $check_post=$row["p_linkimage"];
+                        }else{
+
                         }                                            
                     }
                 } else {
