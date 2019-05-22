@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-    <form action="ConnData/check_login.php" method="post">
+    <form action="../ConnData/checkDiseaseUpdate.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-12"><br>
             <center><h4>Classification.</h4></center><hr>
@@ -24,12 +24,16 @@
                     s15<br>
                     <img src="../image_classification/S15.jpg"  width="75%" >
                     <div class="row"><div class="col-12"><br>
-                            <input  type="radio" name="S15" value="1" onchange="funS9()"> Yes   
-                            <input  type="radio" name="S15" value="0" onchange="funS16()"> No<br>
+                            <!-- <input  type="radio" name="S15" value="1" onchange="funS9()" > Yes   
+                            <input  type="radio" name="S15" value="0" onclick="funS16()"> No<br> -->
+                            <input  type="radio" name="S15" value="1" > Yes   
+                            <input  type="radio" name="S15" value="0" > No<br>
+                            <button type="submit" class="form-control  btn-primary" name="save">Save.</button> <br><br>
+
                     </div></div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="demon">
         
         </div>
     </form>
@@ -83,85 +87,85 @@
             function funS9_2() {
             document.getElementById("demo").innerHTML = 's9<br>    <img src="../image_classification/S9.jpg" width="75%" >'
             +'<div class="row"><div class="col-12"><br>'
-            +'<input type="radio" name="S16" value="1" onchange="funAs()"> Yes    '
-            +'<input type="radio" name="S16" value="0" onchange="funS8_2()"> No<br>'
+            +'<input type="radio" name="S9" value="1" onchange="funAs()"> Yes    '
+            +'<input type="radio" name="S9" value="0" onchange="funS8_2()"> No<br>'
             +'</div></div>';
             }
                 function funS8_2() {
                 document.getElementById("demo").innerHTML = 's8<br>    <img src="../image_classification/S8.jpg" width="75%" >'
                 +'<div class="row"><div class="col-12"><br>'
-                +'<input type="radio" name="S16" value="1" onchange="funAn()"> Yes    '
-                +'<input type="radio" name="S16" value="0" onchange="funAs()"> No<br>'
+                +'<input type="radio" name="S8" value="1" onchange="funAn()"> Yes    '
+                +'<input type="radio" name="S8" value="0" onchange="funAs()"> No<br>'
                 +'</div></div>';
                 }
             function funS4() {
             document.getElementById("demo").innerHTML = 's4<br>    <img src="../image_classification/S4.jpg" width="75%" >'
             +'<div class="row"><div class="col-12"><br>'
-            +'<input type="radio" name="S16" value="1" onchange="funS12_3()"> Yes    '
-            +'<input type="radio" name="S16" value="0" onchange="funS9_3()"> No<br>'
+            +'<input type="radio" name="S4" value="1" onchange="funS12_3()"> Yes    '
+            +'<input type="radio" name="S4" value="0" onchange="funS9_3()"> No<br>'
             +'</div></div>';
             }
                 function funS12_3() {
                 document.getElementById("demo").innerHTML = 's12<br>    <img src="../image_classification/S12.jpg" width="75%" >'
                 +'<div class="row"><div class="col-12"><br>'
-                +'<input type="radio" name="S16" value="1" onchange="funAs()"> Yes    '
-                +'<input type="radio" name="S16" value="0" onchange="funS14()"> No<br>'
+                +'<input type="radio" name="S12" value="1" onchange="funAs()"> Yes    '
+                +'<input type="radio" name="S12" value="0" onchange="funS14()"> No<br>'
                 +'</div></div>';
                 }
                     function funS14() {
                     document.getElementById("demo").innerHTML = 's14<br>    <img src="../image_classification/S14.jpg" width="75%" >'
                     +'<div class="row"><div class="col-12"><br>'
-                    +'<input type="radio" name="S16" value="1" onchange="funAs()"> Yes    '
-                    +'<input type="radio" name="S16" value="0" onchange="funS3()"> No<br>'
+                    +'<input type="radio" name="S14" value="1" onchange="funAs()"> Yes    '
+                    +'<input type="radio" name="S14" value="0" onchange="funS3()"> No<br>'
                     +'</div></div>';
                     }
                         function funS3() {
                         document.getElementById("demo").innerHTML = 's3<br>    <img src="../image_classification/S3.jpg" width="75%" >'
                         +'<div class="row"><div class="col-12"><br>'
-                        +'<input type="radio" name="S16" value="1" onchange="funNor()"> Yes    '
-                        +'<input type="radio" name="S16" value="0" onchange="funAs()"> No<br>'
+                        +'<input type="radio" name="S3" value="1" onchange="funNor()"> Yes    '
+                        +'<input type="radio" name="S3" value="0" onchange="funAs()"> No<br>'
                         +'</div></div>';
                         }
                 function funS9_3() {
                 document.getElementById("demo").innerHTML = 's9<br>    <img src="../image_classification/S9.jpg" width="75%" >'
                 +'<div class="row"><div class="col-12"><br>'
-                +'<input type="radio" name="S16" value="1" onchange="funS6()"> Yes    '
-                +'<input type="radio" name="S16" value="0" onchange="funNor()"> No<br>'
+                +'<input type="radio" name="S9" value="1" onchange="funS6()"> Yes    '
+                +'<input type="radio" name="S9" value="0" onchange="funNor()"> No<br>'
                 +'</div></div>';
                 }
                     function funS6() {
                     document.getElementById("demo").innerHTML = 's6<br>    <img src="../image_classification/S6.jpg" width="75%" >'
                     +'<div class="row"><div class="col-12"><br>'
-                    +'<input type="radio" name="S16" value="1" onchange="funS14_2()"> Yes    '
-                    +'<input type="radio" name="S16" value="0" onchange="funNor()"> No<br>'
+                    +'<input type="radio" name="S6" value="1" onchange="funS14_2()"> Yes    '
+                    +'<input type="radio" name="S6" value="0" onchange="funNor()"> No<br>'
                     +'</div></div>';
                     }
                     function funS14_2() {
                         document.getElementById("demo").innerHTML = 's14<br>    <img src="../image_classification/S14.jpg" width="75%" >'
                         +'<div class="row"><div class="col-12"><br>'
-                        +'<input type="radio" name="S16" value="1" onchange="funAs()"> Yes    '
-                        +'<input type="radio" name="S16" value="0" onchange="funS13()"> No<br>'
+                        +'<input type="radio" name="S14" value="1" onchange="funAs()"> Yes    '
+                        +'<input type="radio" name="S14" value="0" onchange="funS13()"> No<br>'
                         +'</div></div>';
                         }
                             function funS13() {
                             document.getElementById("demo").innerHTML = 's13<br>    <img src="../image_classification/S13.jpg" width="75%" >'
                             +'<div class="row"><div class="col-12"><br>'
-                            +'<input type="radio" name="S16" value="1" onchange="funS12_4()"> Yes    '
-                            +'<input type="radio" name="S16" value="0" onchange="funAs()"> No<br>'
+                            +'<input type="radio" name="S13" value="1" onchange="funS12_4()"> Yes    '
+                            +'<input type="radio" name="S13" value="0" onchange="funAs()"> No<br>'
                             +'</div></div>';
                             }
                                 function funS12_4() {
                                 document.getElementById("demo").innerHTML = 's12<br>    <img src="../image_classification/S12.jpg" width="75%" >'
                                 +'<div class="row"><div class="col-12"><br>'
-                                +'<input type="radio" name="S16" value="1" onchange="funS2()"> Yes    '
-                                +'<input type="radio" name="S16" value="0" onchange="funNor()"> No<br>'
+                                +'<input type="radio" name="S12" value="1" onchange="funS2()"> Yes    '
+                                +'<input type="radio" name="S12" value="0" onchange="funNor()"> No<br>'
                                 +'</div></div>';
                                 }
                                     function funS2() {
                                     document.getElementById("demo").innerHTML = 's2<br>    <img src="../image_classification/S2.jpg" width="75%" >'
                                     +'<div class="row"><div class="col-12"><br>'
-                                    +'<input type="radio" name="S16" value="1" onchange="funNor()"> Yes    '
-                                    +'<input type="radio" name="S16" value="0" onchange="funAs()"> No<br>'
+                                    +'<input type="radio" name="S2" value="1" onchange="funNor()"> Yes    '
+                                    +'<input type="radio" name="S2" value="0" onchange="funAs()"> No<br>'
                                     +'</div></div>';
                                     }
 
@@ -169,17 +173,17 @@
         function funAn() {
         document.getElementById("demo").innerHTML = ' <br><h4><center> Anthracnose . </center></h4> '
         +'<button type="submit" class="form-control btn-primary" name="save">Save.</button> <br><br>'
-        +'<button type="" class="form-control  btn-danger" name="cancel">Check Again.</button>';
+        +'<button type="reset" class="form-control  btn-danger" onClick="window.location.reload();">Check Again.</button>';
         }
         function funAs() {
         document.getElementById("demo").innerHTML = ' <br><h4><center> Algol Spot . </center></h4><br><br> '
         +'<button type="submit" class="form-control btn-primary" name="save">Save.</button> <br><br>'
-        +'<button type="" class="form-control  btn-danger" name="cancel">Check Again.</button>';
+        +'<button type="reset" class="form-control  btn-danger" onClick="window.location.reload();">Check Again.</button>';
         }
         function funNor() {
         document.getElementById("demo").innerHTML = ' <br><h4><center> Normal . </center></h4> '
         +'<button type="submit" class="form-control  btn-primary" name="save">Save.</button> <br><br>'
-        +'<button type="" class="form-control  btn-danger" name="cancel">Check Again.</button>';
+        +'<button type="reset" class="form-control  btn-danger" onClick="window.location.reload();">Check Again.</button>';
         }
     </script>
 </body>
