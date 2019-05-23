@@ -15,8 +15,15 @@
 </head>
 
 <body>
+    <?php session_start(); ?>
+    <div style="text-align:right" class="usertop">
+        Username :
+        <?php echo $_SESSION["m_username"]; ?>
+        | Status :
+        <?php echo $_SESSION["m_status"]; ?>
 
-    <p class="text-line" style="margin-top: 30px;">
+    </div>
+    <p class="text-line">
         <img src="../img/mangoicon.png" style="width: 50px; margin-right: 20px;">
         EXPERT SYSTEM FOR PLANT DISEASE CLASSIFICATION
     </p>
@@ -36,10 +43,10 @@
                 <p class="text-img-detail">Symptoms</p>
             </button></a>
     </div>
-    
+
     <!-- disease 1 -->
     <div class="container" style="margin-top: 10px;">
-    <p class="textabout">Disease in Mango</p>
+        <p class="textabout">Disease in Mango</p>
         <div class="row box-disease">
             <div class="col-md-4">
                 <img src="../img/a1.jpg" class="imgdetail" alt="">

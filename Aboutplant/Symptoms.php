@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <title>Disease in Mango</title>
+   <title>Symptoms in Mango</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -15,8 +15,16 @@
 </head>
 
 <body>
+   
+<?php session_start(); ?>
+    <div style="text-align:right" class="usertop">
+        Username :
+        <?php echo $_SESSION["m_username"]; ?>
+        | Status :
+        <?php echo $_SESSION["m_status"]; ?>
 
-   <p class="text-line" style="margin-top: 30px;">
+    </div>
+   <p class="text-line">
       <img src="../img/mangoicon.png" style="width: 50px; margin-right: 20px;">
       EXPERT SYSTEM FOR PLANT DISEASE CLASSIFICATION
    </p>

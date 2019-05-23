@@ -20,43 +20,33 @@
     <div style="text-align:right" class="usertop">
         Username :
         <?php echo $_SESSION["m_username"]; ?>
-        | Status : 
+        | Status :
         <?php echo $_SESSION["m_status"]; ?>
 
     </div>
 
-    <!-- start nav-bar -->
-    <div class="topnav" style="float-right">
-    <a href="#"  class="float-right">Classify Plant</a>
-    <a href="#" class="float-right">My Post</a>
-    <a href="#about" class="float-right active">Post</a>
-    <a href="#" class="float-right">Home</a>
+    <p class="text-line">
+        <img src="../img/mangoicon.png" style="width: 50px; margin-right: 20px;">
+        EXPERT SYSTEM FOR PLANT DISEASE CLASSIFICATION
+    </p>
 
-        <div class="search-container">
-            <!-- <form action="/action_page.php">
-                <input type="text" placeholder="Search..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form> -->
-        </div>
-    </div>
-    <!-- end nav-bar -->
+    <div class="container box-post" style="margin-top: 30px;">
 
-    <div class="container">
         <form action="../ConnData/InsertPost.php" method="post" enctype="multipart/form-data">
 
-            <div class="row">
-                <div class="col-xs-0 col-sm-2 col-md-2"></div>
-                <div class="col-xs-12 col-sm-8 col-md-8">
+            <div class="row" style="margin: 0px;">
+                <div class="col-xs-0 col-sm-0 col-md-2"></div>
+                <div class="col-xs-12 col-sm-12 col-md-8">
 
-                        <h1>Post</h1>
-                    <label id="first">Header :</label><br/>
-                    <input class="form-control" type="text" name="header" maxlength="30" style="width:40%;" required><br/>
-                    <label id="first">Detail :</label><br/>
+                    <h1 class="header">Create Post</h1>
+                    <label id="first">Header :</label><br />
+                    <input class="form-control" type="text" name="header" maxlength="30" style="width:40%;" required><br />
+                    <label id="first">Detail :</label><br />
                     <textarea class="form-control" rows="5" type="text" name="detail" required></textarea>
 
-                    <label id="first" style="margin-top: 20px;">Upload Photo :</label><br/>
-                    <input type="file" name="image[]" id="image"><br> 
-                    <p></p>
+                    <label id="first" style="margin-top: 20px;">Upload Photo :</label><br />
+                    <input type="file" name="image[]" id="image"><br>
+                    <h5></h5>
                     <input type="button" value="Add Image" id="add_image1">
 
                     <input type="hidden" name="own" value="<?php echo $_SESSION["m_id"]; ?>">
@@ -77,13 +67,15 @@
                     // echo generateRandomString();
                     ?>
                     <input type="hidden" name="key_post_image" value="<?php echo generateRandomString(); ?>">
-                    <div style="margin-top: 80px;">
-                        <button class="btn-primary form-control col-2" id="insert" type="submit" name="save" style="float: right;">Post</button>
-                    <a class="btn btn-danger form-control col-2" href="#" role="button" style="float: right; margin-right:10px;">Cancel</a>
+                    <div style="margin-top:30px; margin-bottom: 50px;">
+                        <button class="btn-success form-control float-right" id="insert" type="submit" name="save" style="width: 80px; margin-left:10px;">Post</button>
+                        <a class="btn btn-danger form-control float-right" href="#" role="button" style="width: 80px;  margin-bottom: 20px;">Cancel</a>
                     </div>
-                    
+
                 </div>
-                <div class="col-xs-0 col-sm-2 col-md-2"></div>
+                <div class="col-xs-0 col-sm-0 col-md-2"></div>
+
+
             </div>
         </form>
     </div>
@@ -93,7 +85,7 @@
 
     <script>
         $('#add_image1').click(function() {
-                        $('p').append('<input type="file" name="image[]" id="image"><br><br>');
+            $('h5').append('<input type="file" name="image[]" id="image"><br><br>');
         });
     </script>
 
