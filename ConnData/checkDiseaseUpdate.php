@@ -28,6 +28,7 @@
     cl_S15 = '".$_POST["S15"]."',cl_S16 = '".$_POST["S16"]."',cl_disease = '".$_POST["disease"]."'
     WHERE cl_image = '".$_SESSION["nameimage"]."' ";
 
+    $_SESSION["disease"]=$_POST["disease"];
     if ($conn->query($sql) === TRUE) {
         header("location:../Classification/resultDisease.php");    
     } else {

@@ -1,8 +1,4 @@
-<?php session_start();
-
-$_SESSION["nameimage"]
-
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,19 +11,48 @@ $_SESSION["nameimage"]
 <body>
     <div class="container">
         <div class="row">
-        <?php $sql = "SELECT * FROM member WHERE m_username = '".$strUsername."' and m_password = '".$strPassword."'";
-        $result = $conn->query($sql);
-        $row = $result->fetch_assoc();
+            <div class="col-12"><br>
+                <center><h3>  <?php echo $_SESSION["disease"]; ?>  </h3></center><br>
+            </div>
+        </div>
+
+        <div class="row">
+        <?php require("../ConnData/connectDB.php");?>
+        <?php 
+            $sql = "SELECT * FROM symptoms WHERE s_disease ='".$_SESSION["disease"]."' ";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
         ?>
+            <div class="col-3">
+                <img src="../image_classification/<?php echo $row["s_image"];?>" width="100%" >
+            </div> 
+        <?php 
+                }
+            }else{
+            }
+        ?> <?php $conn->close(); ?>
+        </div>
 
+        <div class="row">
+        <?php require("../ConnData/connectDB.php");?>
+        <?php 
+            $sql = "SELECT * FROM disease WHERE d_name ='".$_SESSION["disease"]."' ";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+        ?>
             <div class="col-12">
-
-            <center><h3></h3></center>
-
-
-
-
-            </div>    
+                
+                <hr>
+                <h4> Symptoms</h4>
+                <p><?php echo $row['d_detail'] ?></p>
+            </div> 
+        <?php 
+                }
+            }else{
+            }
+        ?> <?php $conn->close(); ?>
         </div> 
         
     </div>
