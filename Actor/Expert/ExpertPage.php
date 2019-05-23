@@ -1,51 +1,97 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Master</title>
+    <title>Expert home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
-    <link rel="shortcut icon" href="img/leaficon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap/css/main.css">
+    <link rel="shortcut icon" href="../../img/leaficon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <?php require("../../ConnData/sessionNULL.php"); 
-        require("../../ConnData/sessionForExpert.php");
+    <?php require("../../ConnData/sessionNULL.php");
+    require("../../ConnData/sessionForExpert.php");
     ?>
+    <!-- user id top -->
+    <div style="text-align:right;" class="usertop">
+        Username :
+        <?php echo $_SESSION["m_username"]; ?>
+        | Status :
+        <?php echo $_SESSION["m_status"]; ?>
+    </div>
+    <!--end user id top -->
+
+    <p class="text-line">
+        <img src="../../img/mangoicon.png" style="width: 50px; margin-right: 20px;">
+        EXPERT SYSTEM FOR PLANT DISEASE CLASSIFICATION
+    </p>
+
     <div class="container">
-        <center>
-            <h3> Expert PAGE. </h3>
-        </center>
-        <div class="row">
-            <table width="100%" >
-                <tr>
-                    <th width="40%">Firstname</th>
-                    <th width="40%">Lastname</th>
-                    <th width="20%">Status</th>
-                </tr>
-                <tr>
-                </tr>
-                    <td><?php echo $_SESSION["m_firstname"]; ?></td>
-                    <td><?php echo $_SESSION["m_lastname"]; ?></td>
-                    <td><?php echo $_SESSION["m_status"]; ?></td>
-            </table>
-            
-        </div>        
-        <div class="row">
-            <div class="col-4"> <br>
-                <a href="../../Posts/post_form.php"><button class="btn-primary form-control ">Post.</button></a>
+        <!-- row 1 -->
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-xs-12 col-md-4">
+                <a href="../../Posts/post_list_person.php">
+                    <button type="submit" class="imgcenter" style="border:0; background: transparent; ">
+                        <img src="../../img/pageicon/aboutme.png" class="imgcenter">
+                        <p class="textimg">About me</p>
+                    </button></a>
             </div>
-            <div class="col-4">
+
+            <div class="col-xs-12 col-md-4">
+                <a href="../../Posts/post_form.php">
+                    <button type="submit" class="imgcenter" style="border: 0; background: transparent">
+                        <img src="../../img/pageicon/post.png" class="imgcenter">
+                        <p class="textimg">Create Post</p>
+                    </button></a>
             </div>
-            <div class="col-4"> <br>
-            <a href="../../ConnData/logout.php"><button class="btn-danger form-control">Log Out.</button></a>
+
+            <div class="col-xs-12 col-md-4">
+                <a href="#">
+                    <button type="submit" class="imgcenter" style="border: 0; background: transparent">
+                        <img src="../../img/pageicon/classification.png" class="imgcenter">
+                        <p class="textimg">Disease <br> Classification</p>
+                    </button></a>
+            </div>
+
+
+        </div>
+
+        <!-- row 2 -->
+        <div class="row" style="margin-top: 50px;">
+
+            <div class="col-xs-12 col-md-4">
+                <a href="../../AboutPlant.php">
+                    <button type="submit" class="imgcenter" style="border: 0; background: transparent">
+                        <img src="../../img/pageicon/aboutplant.png" class="imgcenter">
+                        <p class="textimg">About Plant's <br> Disease in Mango</p>
+                    </button></a>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <a href="../../Posts/post_form.php">
+                    <button type="submit" class="imgcenter" style="border: 0; background: transparent">
+                        <img src="../../img/pageicon/dataidentify.png" class="imgcenter">
+                        <p class="textimg">Data Identify</p>
+                    </button></a>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <a href="../../login.php">
+                    <button type="submit" class="imgcenter" style="border: 0; background: transparent">
+                        <img src="../../img/pageicon/logout.png" class="imgcenter">
+                        <p class="textimg">Log out</p>
+                    </button></a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-4"> <br>
-                <a href="../../Posts/post_list_person.php"><button class="btn-primary form-control ">See My Post.</button></a>
-            </div>
-        </div>
+
+    </div>
+
     </div>
 </body>
+
 </html>
