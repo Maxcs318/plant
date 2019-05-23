@@ -29,15 +29,7 @@
     WHERE cl_image = '".$_SESSION["nameimage"]."' ";
 
     if ($conn->query($sql) === TRUE) {
-        if($_SESSION["m_status"]=='admin'){
-            header("location:../Actor/Admin/AdminPage.php");      
-        }
-        if($_SESSION["m_status"]=='expert'){
-            header("location:../Actor/Expert/ExpertPage.php");      
-        }
-        if($_SESSION["m_status"]=='user'){
-            header("location:../Actor/User/UserPage.php");      
-        }
+        header("location:../Classification/resultDisease.php");    
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
