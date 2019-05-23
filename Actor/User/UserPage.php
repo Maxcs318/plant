@@ -63,7 +63,7 @@
             </div>
 
             <div class="col-xs-12 col-md-4">
-                <a href="#">
+                <a href="../../Classification/chooseimageforcheck.php">
                     <button type="submit" class="imgcenter" style="border: 0; background: transparent">
                         <img src="../../img/pageicon/classification.png" class="imgcenter">
                         <p class="textimg">Disease <br> Classification</p>
@@ -71,16 +71,24 @@
             </div>
 
             <div class="col-xs-12 col-md-4">
-                <a href="../../ConnData/logout.php">
-                    <button type="submit" class="imgcenter" style="border: 0; background: transparent">
+                    <button type="submit" class="imgcenter" style="border: 0; background: transparent" onclick="logout()">
                         <img src="../../img/pageicon/logout.png" class="imgcenter">
                         <p class="textimg">Log out</p>
-                    </button></a>
+                    </button>
             </div>
         </div>
     </div>
 
     </div>
+<script>
+    function logout() {
+        if (confirm("Are you sure you want to Log Out?")) {
+            window.location.href='../../ConnData/logout.php'; 
+        } else {
+            window.location.reload();
+        }
+    }
+</script>
 </body>
 
 </html>

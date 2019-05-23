@@ -215,6 +215,22 @@
             <div class="col-12"><br>
             <center><h4>Classification.</h4></center><hr>
             </div>
+            <input type="hidden" name="S1" value="0">
+            <input type="hidden" name="S2" value="0">
+            <input type="hidden" name="S3" value="0">
+            <input type="hidden" name="S4" value="0">
+            <input type="hidden" name="S5" value="0">
+            <input type="hidden" name="S6" value="0">
+            <input type="hidden" name="S7" value="0">
+            <input type="hidden" name="S8" value="0">
+            <input type="hidden" name="S9" value="0">
+            <input type="hidden" name="S10" value="0">
+            <input type="hidden" name="S11" value="0">
+            <input type="hidden" name="S12" value="0">
+            <input type="hidden" name="S13" value="0">
+            <input type="hidden" name="S14" value="0">
+            <input type="hidden" name="S15" value="0">
+            <input type="hidden" name="S16" value="0">
         </div>
         <div class="row">
             <div class="col-6">
@@ -398,7 +414,7 @@
                 <div class="row">
                 <div class="col-12">
                     <br><h4><center> Anthracnose . </center></h4><br><br>
-                    <button type="submit" class="form-control btn-primary" name="save">Save.</button> <br><br>
+                    <button type="submit" class="form-control btn-primary" name="disease" value="Anthracnose">Save.</button> <br><br>
                     <button type="reset" class="form-control  btn-danger" onClick="window.location.reload();">
                     Check Again.</button>
                 </div>
@@ -408,8 +424,8 @@
             <x class=" As">
                 <div class="row">
                 <div class="col-12">
-                    <br><h4><center> Algol Spot . </center></h4><br><br> 
-                    <button type="submit" class="form-control btn-primary" name="save">Save.</button> <br><br>
+                    <br><h4><center> Algol Spot . </center></h4><br><br>
+                    <button type="submit" class="form-control btn-primary" name="disease" value="Algol Spot">Save.</button> <br><br>
                     <button type="reset" class="form-control  btn-danger" onClick="window.location.reload();">
                     Check Again.</button>
                 </div>
@@ -420,7 +436,7 @@
                 <div class="row">
                 <div class="col-12">
                     <br><h4><center> Normal . </center></h4><br><br>
-                    <button type="submit" class="form-control  btn-primary" name="save">Save.</button> <br><br>
+                    <button type="submit" class="form-control  btn-primary" name="disease" value="Normal">Save.</button> <br><br>
                     <button type="reset" class="form-control  btn-danger" onClick="window.location.reload();">
                     Check Again.</button>
                 </div>
