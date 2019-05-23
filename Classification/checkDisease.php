@@ -7,10 +7,210 @@
     <title>Check Disease.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".S9").hide();
+            $(".S8").hide();
+            $(".S12_2").hide();
+            $(".S12").hide();
+            $(".S5").hide();
+            $(".S16").hide();
+            $(".S9_2").hide();
+            $(".S8_2").hide();
+            $(".S4").hide();
+            $(".S12_3").hide();
+            $(".S14").hide();
+            $(".S3").hide();
+            $(".S9_3").hide();
+            $(".S6").hide();
+            $(".S14_2").hide();
+            $(".S13").hide();
+            $(".S12_4").hide();
+            $(".S2").hide();
+
+            $(".As").hide();
+            $(".An").hide();
+            $(".Nor").hide();
+//15
+        $(".S15y").click(function(){
+            $(".S15").hide();
+            $(".S9").show();
+        });
+        $(".S15n").click(function(){
+            $(".S15").hide();
+            $(".S16").show();
+        });
+//9
+        $(".S9y").click(function(){
+            $(".S9").hide();
+            $(".S12").show();
+        });
+        $(".S9n").click(function(){
+            $(".S9").hide();
+            $(".S8").show();
+        });
+//8
+        $(".S8y").click(function(){
+            $(".S8").hide();
+            $(".S12_2").show();
+        });
+        $(".S8n").click(function(){
+            $(".S8").hide();
+            $(".An").show();
+        });
+//12_2
+        $(".S12_2y").click(function(){
+            $(".S12_2").hide();
+            $(".As").show();
+        });
+        $(".S12_2n").click(function(){
+            $(".S12_2").hide();
+            $(".An").show();
+        });
+//12
+        $(".S12y").click(function(){
+            $(".S12").hide();
+            $(".As").show();
+        });
+        $(".S12n").click(function(){
+            $(".S12").hide();
+            $(".S5").show();
+        });
+//5
+        $(".S5y").click(function(){
+            $(".S5").hide();
+            $(".As").show();
+        });
+        $(".S5n").click(function(){
+            $(".S5").hide();
+            $(".An").show();
+        });
+//16 
+        $(".S16y").click(function(){
+            $(".S16").hide();
+            $(".S9_2").show();
+        });
+        $(".S16n").click(function(){
+            $(".S16").hide();
+            $(".S4").show();
+        });
+//9_2
+        $(".S9_2y").click(function(){
+            $(".S9_2").hide();
+            $(".As").show();
+        });
+        $(".S9_2n").click(function(){
+            $(".S9_2").hide();
+            $(".S8_2").show();
+        });
+//8_2
+        $(".S8_2y").click(function(){
+            $(".S8_2").hide();
+            $(".An").show();
+        });
+        $(".S8_2n").click(function(){
+            $(".S8_2").hide();
+            $(".As").show();
+        });
+//4
+        $(".S4y").click(function(){
+            $(".S4").hide();
+            $(".S12_3").show();
+        });
+        $(".S4n").click(function(){
+            $(".S4").hide();
+            $(".S9_3").show();
+        });
+//12_3
+        $(".S12_3y").click(function(){
+            $(".S12_3").hide();
+            $(".As").show();
+        });
+        $(".S12_3n").click(function(){
+            $(".S12_3").hide();
+            $(".S14").show();
+        });
+//14
+        $(".S14y").click(function(){
+            $(".S14").hide();
+            $(".As").show();
+        });
+        $(".S14n").click(function(){
+            $(".S14").hide();
+            $(".S3").show();
+        });
+//3
+        $(".S3y").click(function(){
+            $(".S3").hide();
+            $(".Nor").show();
+        });
+        $(".S3n").click(function(){
+            $(".S3").hide();
+            $(".As").show();
+        });
+//9_3
+        $(".S9_3y").click(function(){
+            $(".S9_3").hide();
+            $(".S6").show();
+        });
+        $(".S9_3n").click(function(){
+            $(".S9_3").hide();
+            $(".Nor").show();
+        });
+//6
+        $(".S6y").click(function(){
+            $(".S6").hide();
+            $(".S14_2").show();
+        });
+        $(".S6n").click(function(){
+            $(".S6").hide();
+            $(".Nor").show();
+        });
+//14_2
+        $(".S14_2y").click(function(){
+            $(".S14_2").hide();
+            $(".As").show();
+        });
+        $(".S14_2n").click(function(){
+            $(".S14_2").hide();
+            $(".S13").show();
+        });
+//13
+        $(".S13y").click(function(){
+            $(".S13").hide();
+            $(".S12_4").show();
+        });
+        $(".S13n").click(function(){
+            $(".S13").hide();
+            $(".As").show();
+        });
+//12_4
+        $(".S12_4y").click(function(){
+            $(".S12_4").hide();
+            $(".S2").show();
+        });
+        $(".S12_4n").click(function(){
+            $(".S12_4").hide();
+            $(".Nor").show();
+        });
+//2
+        $(".S2y").click(function(){
+            $(".S2").hide();
+            $(".Nor").show();
+        });
+        $(".S2n").click(function(){
+            $(".S2").hide();
+            $(".As").show();
+        });
+
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-    <form action="ConnData/check_login.php" method="post">
+    <form action="../ConnData/checkDiseaseUpdate.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-12"><br>
             <center><h4>Classification.</h4></center><hr>
@@ -20,167 +220,218 @@
             <div class="col-6">
                 <img src="../image_for_checkdisease/<?php echo $_SESSION["nameimage"];?>"  width="100%" >
             </div>
-            <div class="col-6" id="demo">
-                    s15<br>
-                    <img src="../image_classification/S15.jpg"  width="75%" >
-                    <div class="row"><div class="col-12"><br>
-                            <input  type="radio" name="S15" value="1" onchange="funS9()"> Yes   
-                            <input  type="radio" name="S15" value="0" onchange="funS16()"> No<br>
-                    </div></div>
+            <div class="col-6">
+                <x class="S15">
+                    s15<br><img src="../image_classification/S15.jpg"  width="75%" >
+                    <div class="row S15">
+                        <div class="col-12"><br>
+                            <input class="S15y" type="radio" name="S15" value="1" > Yes   
+                            <input class="S15n" type="radio" name="S15" value="0" > No<br>
+                        </div>
+                    </div>
+                </x>
+                <x class="S9">
+                    s9<br><img src="../image_classification/S9.jpg" width="75%" >
+                    <div class="row S9">
+                        <div class="col-12"><br>
+                            <input class="S9y" type="radio" name="S9" value="1" > Yes  
+                            <input class="S9n" type="radio" name="S9" value="0" > No<br>
+                        </div>
+                    </div>
+                </x>
+                    <x class="S8">
+                    s8<br><img src="../image_classification/S8.jpg" width="75%" >
+                    <div class="row">
+                        <div class="col-12"><br>
+                            <input class="S8y" type="radio" name="S8" value="1" > Yes    
+                            <input class="S8n" type="radio" name="S8" value="0" > No<br>
+                        </div>
+                    </div>
+                    </x>
+                        <x class="S12_2">
+                        s12<br><img src="../image_classification/S12.jpg" width="75%" >
+                        <div class="row">
+                            <div class="col-12"><br>
+                                <input class="S12_2y" type="radio" name="S12" value="1" > Yes  
+                                <input class="S12_2n" type="radio" name="S12" value="0" > No<br>
+                            </div>
+                        </div>
+                        
+                        </x>
+                    <x class="S12">
+                        s12<br><img src="../image_classification/S12.jpg" width="75%" >
+                        <div class="row">
+                            <div class="col-12"><br>
+                                <input class="S12y" type="radio" name="S12" value="1" > Yes  
+                                <input class="S12n" type="radio" name="S12" value="0" > No<br>
+                            </div>
+                        </div>
+                    </x>
+                        <x class="S5">
+                        s5<br><img src="../image_classification/S5.jpg" width="75%" >
+                            <div class="row">
+                                <div class="col-12"><br>
+                                    <input class="S5y" type="radio" name="S5" value="1" > Yes   
+                                    <input class="S5n" type="radio" name="S5" value="0" > No<br>
+                                </div>
+                            </div>
+                        </x>
+                <x class="S16">
+                    s16<br><img src="../image_classification/S16.jpg" width="75%" >
+                    <div class="row">
+                        <div class="col-12"><br>
+                            <input class="S16y" type="radio" name="S16" value="1" > Yes    
+                            <input class="S16n" type="radio" name="S16" value="0" > No<br>
+                        </div>
+                    </div>
+                </x>
+                    <x class="S9_2">
+                        s9<br><img src="../image_classification/S9.jpg" width="75%" >
+                        <div class="row">
+                            <div class="col-12"><br>
+                                <input class="S9_2y" type="radio" name="S9" value="1" > Yes    
+                                <input class="S9_2n" type="radio" name="S9" value="0" > No<br>
+                            </div>
+                        </div>
+                    </x>
+                        <x class="S8_2">
+                            s8<br><img src="../image_classification/S8.jpg" width="75%" >
+                            <div class="row">
+                                <div class="col-12"><br>
+                                    <input class="S8_2y" type="radio" name="S8" value="1" > Yes    
+                                    <input class="S8_2n" type="radio" name="S8" value="0" > No<br>
+                                </div>
+                            </div>
+                        </x>
+                    <x class="S4">
+                        s4<br><img src="../image_classification/S4.jpg" width="75%" >
+                        <div class="row">
+                            <div class="col-12"><br>
+                                <input class="S4y" type="radio" name="S4" value="1" > Yes    
+                                <input class="S4n" type="radio" name="S4" value="0" > No<br>
+                            </div>
+                        </div>
+                    </x>
+                        <x class="S12_3">
+                            s12<br><img src="../image_classification/S12.jpg" width="75%" >
+                            <div class="row">
+                                <div class="col-12"><br>
+                                    <input class="S12_3y" type="radio" name="S12" value="1" > Yes    
+                                    <input class="S12_3n" type="radio" name="S12" value="0" > No<br>
+                                </div>
+                            </div>
+                        </x>
+                            <x class="S14">
+                                s14<br><img src="../image_classification/S14.jpg" width="75%" >
+                                <div class="row">
+                                    <div class="col-12"><br>
+                                        <input class="S14y" type="radio" name="S14" value="1" > Yes    
+                                        <input class="S14n" type="radio" name="S14" value="0" > No<br>
+                                    </div>
+                                </div>
+                            </x>
+                                <x class="S3">
+                                    s3<br><img src="../image_classification/S3.jpg" width="75%" >
+                                    <div class="row">
+                                        <div class="col-12"><br>
+                                            <input class="S3y" type="radio" name="S3" value="1" > Yes    
+                                            <input class="S3n" type="radio" name="S3" value="0" > No<br>
+                                        </div>
+                                    </div>
+                                </x>
+                        <x class="S9_3">
+                            s9<br><img src="../image_classification/S9.jpg" width="75%" >
+                            <div class="row">
+                                <div class="col-12"><br>
+                                    <input class="S9_3y" type="radio" name="S9" value="1" > Yes    
+                                    <input class="S9_3n" type="radio" name="S9" value="0" > No<br>
+                                </div>
+                            </div>
+                        </x>            
+                            <x class="S6">
+                                s6<br><img src="../image_classification/S6.jpg" width="75%" >
+                                <div class="row">
+                                    <div class="col-12"><br>
+                                        <input class="S6y" type="radio" name="S6" value="1" > Yes    
+                                        <input class="S6n" type="radio" name="S6" value="0" > No<br>
+                                    </div>
+                                </div>
+                            </x>
+                                <x class="S14_2">
+                                    s14<br><img src="../image_classification/S14.jpg" width="75%" >
+                                    <div class="row">
+                                        <div class="col-12"><br>
+                                            <input class="S14_2y" type="radio" name="S14" value="1" > Yes    
+                                            <input class="S14_2n" type="radio" name="S14" value="0" > No<br>
+                                        </div>
+                                    </div>
+                                </x>
+                                    <x class="S13">
+                                        s13<br><img src="../image_classification/S13.jpg" width="75%" >
+                                        <div class="row">
+                                            <div class="col-12"><br>
+                                                <input class="S13y" type="radio" name="S13" value="1" > Yes    
+                                                <input class="S13n" type="radio" name="S13" value="0" > No<br>
+                                            </div> 
+                                        </div>
+                                    </x>
+                                        <x class="S12_4">
+                                            s12<br><img src="../image_classification/S12.jpg" width="75%" >
+                                            <div class="row">
+                                                <div class="col-12"><br>
+                                                    <input class="S12_4y" type="radio" name="S12" value="1" > Yes    
+                                                    <input class="S12_4n" type="radio" name="S12" value="0" > No<br>
+                                                </div>
+                                            </div>
+                                        </x>
+                                            <x class="S2">
+                                                s2<br><img src="../image_classification/S2.jpg" width="75%" >
+                                                <div class="row">
+                                                    <div class="col-12"><br>
+                                                        <input class="S2y" type="radio" name="S2" value="1" > Yes    
+                                                        <input class="S2n" type="radio" name="S2" value="0" > No<br>
+                                                    </div>
+                                                </div>
+                                            </x>
+            <!-- last -->
+            <x class="An">
+                <div class="row">
+                <div class="col-12">
+                    <br><h4><center> Anthracnose . </center></h4><br><br>
+                    <button type="submit" class="form-control btn-primary" name="save">Save.</button> <br><br>
+                    <button type="reset" class="form-control  btn-danger" onClick="window.location.reload();">
+                    Check Again.</button>
+                </div>
+                </div>
+            </x>
+
+            <x class=" As">
+                <div class="row">
+                <div class="col-12">
+                    <br><h4><center> Algol Spot . </center></h4><br><br> 
+                    <button type="submit" class="form-control btn-primary" name="save">Save.</button> <br><br>
+                    <button type="reset" class="form-control  btn-danger" onClick="window.location.reload();">
+                    Check Again.</button>
+                </div>
+                </div>
+            </x>
+
+            <x class="Nor">
+                <div class="row">
+                <div class="col-12">
+                    <br><h4><center> Normal . </center></h4><br><br>
+                    <button type="submit" class="form-control  btn-primary" name="save">Save.</button> <br><br>
+                    <button type="reset" class="form-control  btn-danger" onClick="window.location.reload();">
+                    Check Again.</button>
+                </div>
+                </div>
+            </x>
+
             </div>
         </div>
-        <div class="row">
         
-        </div>
     </form>
     </div>
     
-    <script>
-        function funS9() {
-        document.getElementById("demo").innerHTML = 's9<br>     <img src="../image_classification/S9.jpg" width="75%" >'
-        +'<div class="row"><div class="col-12"><br>'
-        +'<input type="radio" name="S9" value="1" onchange="funS12()"> Yes  '
-        +'<input type="radio" name="S9" value="0" onchange="funS8()"> No<br>'
-        +'</div></div>';
-        }
-            function funS8() {
-            document.getElementById("demo").innerHTML = 's8<br>     <img src="../image_classification/S8.jpg" width="75%" >'
-            +'<div class="row"><div class="col-12"><br>'
-            +'<input type="radio" name="S8" value="1" onchange="funS12_2()"> Yes    '
-            +'<input type="radio" name="S8" value="0" onchange="funAn()"> No<br>'
-            +'</div></div>';
-            }
-                function funS12_2() {
-                document.getElementById("demo").innerHTML = 's12<br>    <img src="../image_classification/S12.jpg" width="75%" >'
-                +'<div class="row"><div class="col-12"><br>'
-                +'<input type="radio" name="S12" value="1" onchange="funAs()"> Yes  '
-                +'<input type="radio" name="S12" value="0" onchange="funAn()"> No<br>'
-                +'</div></div>';
-                }
-                
-            function funS12() {
-            document.getElementById("demo").innerHTML = 's12<br>    <img src="../image_classification/S12.jpg" width="75%" >'
-            +'<div class="row"><div class="col-12"><br>'
-            +'<input type="radio" name="S12" value="1" onchange="funAs()"> Yes  '
-            +'<input type="radio" name="S12" value="0" onchange="funS5()"> No<br>'
-            +'</div></div>';
-            }
-                function funS5() {
-                document.getElementById("demo").innerHTML = 's5<br>     <img src="../image_classification/S5.jpg" width="75%" >'
-                +'<div class="row"><div class="col-12"><br>'
-                +'<input type="radio" name="S5" value="1" onchange="funAs()"> Yes   '
-                +'<input type="radio" name="S5" value="0" onchange="funAn()"> No<br>'
-                +'</div></div>';
-                }
-
-        function funS16() {
-        document.getElementById("demo").innerHTML = 's16<br>    <img src="../image_classification/S16.jpg" width="75%" >'
-        +'<div class="row"><div class="col-12"><br>'
-        +'<input type="radio" name="S16" value="1" onchange="funS9_2()"> Yes    '
-        +'<input type="radio" name="S16" value="0" onchange="funS4()"> No<br>'
-        +'</div></div>';
-        }
-            function funS9_2() {
-            document.getElementById("demo").innerHTML = 's9<br>    <img src="../image_classification/S9.jpg" width="75%" >'
-            +'<div class="row"><div class="col-12"><br>'
-            +'<input type="radio" name="S16" value="1" onchange="funAs()"> Yes    '
-            +'<input type="radio" name="S16" value="0" onchange="funS8_2()"> No<br>'
-            +'</div></div>';
-            }
-                function funS8_2() {
-                document.getElementById("demo").innerHTML = 's8<br>    <img src="../image_classification/S8.jpg" width="75%" >'
-                +'<div class="row"><div class="col-12"><br>'
-                +'<input type="radio" name="S16" value="1" onchange="funAn()"> Yes    '
-                +'<input type="radio" name="S16" value="0" onchange="funAs()"> No<br>'
-                +'</div></div>';
-                }
-            function funS4() {
-            document.getElementById("demo").innerHTML = 's4<br>    <img src="../image_classification/S4.jpg" width="75%" >'
-            +'<div class="row"><div class="col-12"><br>'
-            +'<input type="radio" name="S16" value="1" onchange="funS12_3()"> Yes    '
-            +'<input type="radio" name="S16" value="0" onchange="funS9_3()"> No<br>'
-            +'</div></div>';
-            }
-                function funS12_3() {
-                document.getElementById("demo").innerHTML = 's12<br>    <img src="../image_classification/S12.jpg" width="75%" >'
-                +'<div class="row"><div class="col-12"><br>'
-                +'<input type="radio" name="S16" value="1" onchange="funAs()"> Yes    '
-                +'<input type="radio" name="S16" value="0" onchange="funS14()"> No<br>'
-                +'</div></div>';
-                }
-                    function funS14() {
-                    document.getElementById("demo").innerHTML = 's14<br>    <img src="../image_classification/S14.jpg" width="75%" >'
-                    +'<div class="row"><div class="col-12"><br>'
-                    +'<input type="radio" name="S16" value="1" onchange="funAs()"> Yes    '
-                    +'<input type="radio" name="S16" value="0" onchange="funS3()"> No<br>'
-                    +'</div></div>';
-                    }
-                        function funS3() {
-                        document.getElementById("demo").innerHTML = 's3<br>    <img src="../image_classification/S3.jpg" width="75%" >'
-                        +'<div class="row"><div class="col-12"><br>'
-                        +'<input type="radio" name="S16" value="1" onchange="funNor()"> Yes    '
-                        +'<input type="radio" name="S16" value="0" onchange="funAs()"> No<br>'
-                        +'</div></div>';
-                        }
-                function funS9_3() {
-                document.getElementById("demo").innerHTML = 's9<br>    <img src="../image_classification/S9.jpg" width="75%" >'
-                +'<div class="row"><div class="col-12"><br>'
-                +'<input type="radio" name="S16" value="1" onchange="funS6()"> Yes    '
-                +'<input type="radio" name="S16" value="0" onchange="funNor()"> No<br>'
-                +'</div></div>';
-                }
-                    function funS6() {
-                    document.getElementById("demo").innerHTML = 's6<br>    <img src="../image_classification/S6.jpg" width="75%" >'
-                    +'<div class="row"><div class="col-12"><br>'
-                    +'<input type="radio" name="S16" value="1" onchange="funS14_2()"> Yes    '
-                    +'<input type="radio" name="S16" value="0" onchange="funNor()"> No<br>'
-                    +'</div></div>';
-                    }
-                    function funS14_2() {
-                        document.getElementById("demo").innerHTML = 's14<br>    <img src="../image_classification/S14.jpg" width="75%" >'
-                        +'<div class="row"><div class="col-12"><br>'
-                        +'<input type="radio" name="S16" value="1" onchange="funAs()"> Yes    '
-                        +'<input type="radio" name="S16" value="0" onchange="funS13()"> No<br>'
-                        +'</div></div>';
-                        }
-                            function funS13() {
-                            document.getElementById("demo").innerHTML = 's13<br>    <img src="../image_classification/S13.jpg" width="75%" >'
-                            +'<div class="row"><div class="col-12"><br>'
-                            +'<input type="radio" name="S16" value="1" onchange="funS12_4()"> Yes    '
-                            +'<input type="radio" name="S16" value="0" onchange="funAs()"> No<br>'
-                            +'</div></div>';
-                            }
-                                function funS12_4() {
-                                document.getElementById("demo").innerHTML = 's12<br>    <img src="../image_classification/S12.jpg" width="75%" >'
-                                +'<div class="row"><div class="col-12"><br>'
-                                +'<input type="radio" name="S16" value="1" onchange="funS2()"> Yes    '
-                                +'<input type="radio" name="S16" value="0" onchange="funNor()"> No<br>'
-                                +'</div></div>';
-                                }
-                                    function funS2() {
-                                    document.getElementById("demo").innerHTML = 's2<br>    <img src="../image_classification/S2.jpg" width="75%" >'
-                                    +'<div class="row"><div class="col-12"><br>'
-                                    +'<input type="radio" name="S16" value="1" onchange="funNor()"> Yes    '
-                                    +'<input type="radio" name="S16" value="0" onchange="funAs()"> No<br>'
-                                    +'</div></div>';
-                                    }
-
-        // last function ---------------
-        function funAn() {
-        document.getElementById("demo").innerHTML = ' <br><h4><center> Anthracnose . </center></h4> '
-        +'<button type="submit" class="form-control btn-primary" name="save">Save.</button> <br><br>'
-        +'<button type="" class="form-control  btn-danger" name="cancel">Check Again.</button>';
-        }
-        function funAs() {
-        document.getElementById("demo").innerHTML = ' <br><h4><center> Algol Spot . </center></h4><br><br> '
-        +'<button type="submit" class="form-control btn-primary" name="save">Save.</button> <br><br>'
-        +'<button type="" class="form-control  btn-danger" name="cancel">Check Again.</button>';
-        }
-        function funNor() {
-        document.getElementById("demo").innerHTML = ' <br><h4><center> Normal . </center></h4> '
-        +'<button type="submit" class="form-control  btn-primary" name="save">Save.</button> <br><br>'
-        +'<button type="" class="form-control  btn-danger" name="cancel">Check Again.</button>';
-        }
-    </script>
 </body>
 </html>
