@@ -15,7 +15,7 @@
             <div class="col-12"><br>
                 <center><h4>Choose File For Check Disease.</h4></center><hr>
                 <label id="first" style="margin-top: 20px;">Upload Photo :</label><br/>
-                <input type="file" name="imageforcheck[]" id="image"><br> 
+                <input type="file" name="imageforcheck[]" id="image" required ><br> 
                 <input type="hidden" name="linkmember" value="<?php echo $_SESSION["m_id"]; ?>">
             </div>    
         </div> <br>
