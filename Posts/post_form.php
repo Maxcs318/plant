@@ -69,7 +69,7 @@
                     <input type="hidden" name="key_post_image" value="<?php echo generateRandomString(); ?>">
                     <div style="margin-top:30px; margin-bottom: 50px;">
                         <button class="btn-success form-control float-right" id="insert" type="submit" name="save" style="width: 80px; margin-left:10px;">Post</button>
-                        <a class="btn btn-danger form-control float-right" href="#" role="button" style="width: 80px;  margin-bottom: 20px;">Cancel</a>
+                        <a class="btn btn-danger form-control float-right" href="#" role="button" onclick="history.back(-1)" style="width: 80px;  margin-bottom: 20px;">Cancel</a>
                     </div>
 
                 </div>

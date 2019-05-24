@@ -33,8 +33,8 @@
     <div class="container box-list" style="margin-top: 40px;">
         <div class="row">
             <div class="col-12"><br>
-            <!-- EDIT HERE -->
-                    <h4 class="list-header">Post ID : </h4>
+                <!-- EDIT HERE -->
+                <h4 class="list-header">Post ID : </h4>
             </div>
         </div>
 
@@ -47,23 +47,20 @@
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             // output data of each row
-            echo '<div class="row"  style="margin: 0px; border: 4px solid green;">';
-                   
-                           
+            echo '<div class="row">';
+
             while ($row = $result->fetch_assoc()) {
                 if ($row["iop_name"] != '') {
                     ?>
-                        <div class="col-md-4">
-                            <div class="imgpost">
-                                <img src="../image_file_post/<?php echo $row["iop_name"]; ?>"style="margin: 0px;" width="100%">
-                            </div>
+                    <div class="col-md-4">
+                        <div class="imgpost">
+                            <img src="../image_file_post/<?php echo $row["iop_name"]; ?>" style="margin: 0px; width:100%;">
                         </div>
+                    </div>
                 <?php
             }
         }
-        echo '
-        
-                        </div>';
+        echo ' </div>';
     } else {
         echo "0 results";
     }
@@ -80,17 +77,28 @@
         if ($result->num_rows > 0) {
             // output data of each row
             echo '<div class="row">';
-            echo '<div class="col-4"></div>';
-            echo '<div class="col-4">';
+            
+            echo '<div class="col-12" style="margin-top: 10px;">';
             while ($row = $result->fetch_assoc()) {
 
-            echo' <div> Post ID : '; echo $row["p_header"] . "<br>"; echo'</div>';
-            echo' <div> Detail : '; echo substr ($row["p_detail"],0,200) . "<br>"; echo'</div>';
-            echo' <div> Date : '; echo substr($row["p_date"], 0, 10)  . "<br>"; echo'</div>';
-            echo' <div> Time : '; echo substr($row["p_date"], 11)  . "<br>"; echo'</div>';
+                echo ' <div> Post ID : ';
+                echo $row["p_header"] . "<br>";
+                echo '</div>';
+
+                echo ' <div> Detail : ';
+                echo substr($row["p_detail"], 0, 200) . "<br>";
+                echo '</div>';
+
+                echo ' <div> Date : ';
+                echo substr($row["p_date"], 0, 10)  . "<br>";
+                echo '</div>';
+
+                echo ' <div> Time : ';
+                echo substr($row["p_date"], 11)  . "<br>";
+                echo '</div>';
             }
-            echo '</div>'; 
-            echo '<div class="col-4"></div>';
+            echo '</div>';
+            
             //row
             echo '</div>';
         } else {
@@ -100,7 +108,7 @@
 
         <?php $conn->close(); ?>
 
-        <hr class="border-line"> 
+        <hr class="border-line">
         <?php require("../ConnData/connectDB.php"); ?>
         <?php
         $sql = " SELECT * FROM comment LEFT JOIN member

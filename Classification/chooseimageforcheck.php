@@ -51,7 +51,9 @@
                     <input type="file" name="imageforcheck[]" id="image" required>
                     <input type="hidden" name="linkmember" value="<?php echo $_SESSION["m_id"]; ?>">
 
-                    <button class="btn-primary form-control float-center" type="submit" name="save" style="width: 30%; margin:20px 30% 20px;">Next</button>
+                    <button class="btn-primary form-control" type="submit" name="save" style="width: 30%; margin:20px 30% 20px;">Next</button>
+                    <button class="btn-danger form-control" type="submit" name="save"  onclick="history.back(-1)" style="width: 30%; margin:20px 30% 20px;">Cancel</button>
+                    
                 </div>
 
                 <div class="col-xs-0 col-md-4"></div>

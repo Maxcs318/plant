@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="mobile">
 
     <!-- user id top -->
     <div style="text-align:right;" class="usertop">
@@ -32,7 +32,7 @@
     <div class="container box-list" style="margin: auto; margin-top: 30px;">
         <div class="row">
             <div class="col-xs-12 col-md-12"><br>
-                <h4 class=" list-header"> My Post All | <a href="../index.php">Index</a></h4>
+                <h4 class=" list-header"> My Post All . <a href="../index.php">Index</a></h4>
             </div>
         </div>
         <?php require("../ConnData/connectDB.php"); ?>
@@ -51,44 +51,53 @@
                 if ($check_post != $row["p_linkimage"]) {
                     $check_post = $row["p_linkimage"];
                     ?>
-                    
-                    <div class="row border-line" onclick="window.location.href='post_selected.php?getPostID=<?php echo $row["p_id"]; ?>'">
-                        <div class="col-xs-2 col-md-2" style="margin-top:20px;">
+
+                    <div class="row border-line">
+                        <div class="col-xs-4 col-md-2" style="margin-top:20px;">
                             <?php
                             if ($row["iop_name"] != '') {
-                                ?>
-                                <img src="../image_file_post/<?php echo $row["iop_name"]; ?>" width="100%"><br>
+                            ?>
+                                <img src="../image_file_post/<?php echo $row["iop_name"]; ?>" width="100%">
                             <?php
                         }
                         ?>
                         </div>
-                        <div class="col-xs-10 col-md-10">
+                        <div class="col-xs-8 col-md-10">
                             <div style="margin-top:20px;">
+                                <div class="float-right">
+
+                                </div>
                                 Post ID: <?php echo $row["p_id"] . "<br>"; ?>
                                 Header : <?php echo $row["p_header"] . "<br>"; ?>
-                                Detail : <?php echo $row["p_detail"] . "<br>"; ?>
+                                Detail : <?php echo substr($row["p_detail"], 0, 100) . "<br>"; ?>
                                 Date : <?php echo substr($row["p_date"], 0, 10)  . "<br>"; ?>
                                 Time : <?php echo substr($row["p_date"], 11)  . "<br>"; ?>
-                            </div>
-                        </div>
-                    </div>
+                                <!-- <div style="text-indent: 30px;">
+                                                <?php 
+                                                ?>
+                                            </div> -->
+                                <a class="float:bottom" href='post_selected.php?getPostID= <?php echo $row["p_id"]; ?>'">View Post</a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <?php
+                        <?php
+                    }
+                }
+            } else {
+                echo "0 results";
             }
-        }
-    } else {
-        echo "0 results";
-    }
-    ?>
+            ?>
+            <a class="btn btn-danger form-control float-right" href="#" role="button" onclick="history.back(-1)" style="width: 80px;  margin-bottom: 20px;">Back</a>
     </div>
 
-    <footer style="margin-bottom: 30px;">
-        <div>
+    <footer style=" margin-bottom: 30px;">
+                        <div>
 
-        </div>
-    </footer>
+                        </div>
+                        </footer>
 
-    <?php $conn->close(); ?>
+                        <?php $conn->close(); ?>
 </body>
 
 </html>
