@@ -34,8 +34,6 @@
                                     Disease  : <?php echo $row["cl_disease"];?><br>
 
                                 </div>
-                                <!-- <div class="col-4">                                
-                                </div> -->
 
                             </div> <hr>
                             <?php

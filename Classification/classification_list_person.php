@@ -27,10 +27,11 @@
                     while($row = $result->fetch_assoc()) {
                             ?>
                                 <div class="col-lg-4 col-xs-6">
-                                    <img src="../image_for_checkdisease/<?php echo $row["cl_image"];?>" height="" width="100%" >
+                                    <img src="../image_for_checkdisease/<?php echo $row["cl_image"];?>" height="350px" width="100%" >
                                     <br><br>
                                     Disease  : <?php echo $row["cl_disease"];?><br><br>
-                                    <button class="form-control btn-danger" > Check Again</button><br><br>
+                                    <button type="submit" class="form-control btn-primary" 
+                                    onclick="window.location.href='classification_selected.php?getCl_image=<?php echo $row["cl_image"]; ?>'"> View</button><br><br>
                                 </div>
                             <?php
                     }
