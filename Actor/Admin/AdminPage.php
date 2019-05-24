@@ -65,7 +65,7 @@
         <div class="row" style="margin-top: 50px;">
 
             <div class="col-xs-12 col-md-3">
-                <a href="../../AboutPlant.php">
+                <a href="../../Aboutplant/AboutPlant.php">
                     <button type="submit" class="imgcenter" style="border: 0; background: transparent">
                         <img src="../../img/pageicon/aboutplant.png" class="imgcenter">
                         <p class="textimg">About Plant's <br> Disease in Mango</p>
@@ -73,7 +73,7 @@
             </div>
 
             <div class="col-xs-12 col-md-3">
-                <a href="../../Posts/post_form.php">
+                <a href="#">
                     <button type="submit" class="imgcenter" style="border: 0; background: transparent">
                         <img src="../../img/pageicon/dataidentify.png" class="imgcenter">
                         <p class="textimg">Data Identify</p>
@@ -81,7 +81,7 @@
             </div>
 
             <div class="col-xs-12 col-md-3">
-                <a href="../../Posts/post_form.php">
+                <a href="#">
                     <button type="submit" class="imgcenter" style="border: 0; background: transparent">
                         <img src="../../img/pageicon/summary.png" class="imgcenter">
                         <p class="textimg">Data Summary</p>

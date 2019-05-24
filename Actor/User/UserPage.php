@@ -63,7 +63,7 @@
             </div>
 
             <div class="col-xs-12 col-md-4">
-                <a href="#">
+                <a href="../../Classification/chooseimageforcheck.php">
                     <button type="submit" class="imgcenter" style="border: 0; background: transparent">
                         <img src="../../img/pageicon/classification.png" class="imgcenter">
                         <p class="textimg">Disease <br> Classification</p>
