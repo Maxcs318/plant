@@ -29,8 +29,9 @@
                                         <img src="../image_for_checkdisease/<?php echo $row["cl_image"];?>" width="100%" >
                                 </div>
                                 <div class="col-lg-6 col-xs-12">
-                                    <h4>Disease  : <?php echo $row["cl_disease"];?></h4>
-                                    <h4>Symptoms Found :
+                                    <h5>Disease Classification : <?php echo $row["cl_disease"];?></h5>
+                                    <h5>Expert Disease Confirm  : <?php echo $row["cl_confirm"];?></h5>
+                                    <h5>Symptoms Found :
                                     <?php
                                     if($row["cl_S1"]=='0' && $row["cl_S2"]=='0' && $row["cl_S3"]=='0' && $row["cl_S4"]=='0'
                                     && $row["cl_S5"]=='0' && $row["cl_S6"]=='0' && $row["cl_S7"]=='0' && $row["cl_S8"]=='0'
@@ -62,9 +63,8 @@
                                     
                                     
                                     <?php } ?>
-                                    </h4>
+                                    </h5>
                                     <br><br>                                    
-                                    <center>
                                     <h5>Confirm Disease </h5>
                                     <br>
                                     <form action="../ConnData/EditClassificationDisease.php" method="post"> 
@@ -77,7 +77,6 @@
                                         </select><br>
                                     <button class="form-control col-lg-6 btn-primary"> Save </button>
                                     </form>
-                                    </center>
                                 </div>
 
                             </div> <hr>
