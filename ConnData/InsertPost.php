@@ -23,7 +23,12 @@ for($i=0;$i<count($_FILES["image"]["name"]);$i++)
             $sql = "INSERT INTO image_of_post (iop_name, iop_linkpost) 
             VALUES ('$newfilename','".$_POST['key_post_image']."')";
             if ($conn->query($sql) === TRUE) {
-                // header("location:../allMember.php");      
+                ?>
+                <script language="javascript">
+                    alert("Create Post Success.");
+                    location.href = "../Posts/post_list_person.php";
+                </script>  
+                <?php
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
@@ -32,6 +37,4 @@ for($i=0;$i<count($_FILES["image"]["name"]);$i++)
         }
 	}
 }
-    header("location:../Posts/post_list_all.php");      
-
 ?>
