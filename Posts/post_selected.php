@@ -169,7 +169,7 @@
     }
     ?>
     <br>
-        <a class="btn btn-danger float-right" href="../index.php" style="width: 90px; margin:30px 0px 10px ">Back</a>
+        <a class="btn btn-danger float-right" onclick="window.history.go(-1); return false;" style="width: 90px; margin:30px 0px 10px">Back</a>
     <br>
     </div>
 

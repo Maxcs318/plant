@@ -38,10 +38,10 @@
             </button></a>
 
         <!-- symptoms button -->
-        <a href="#">
+        <a href="../Classification/data_identify_list_all.php">
             <button type="submit" style="border: 0; background: transparent">
-                <img src="../img/symptom.png" class="imgabout">
-                <p class="text-img-detail">Check <br> Classification</p>
+                <img src="../img/pageicon/dataidentify.png" class="imgabout">
+                <p class="text-img-detail">Data <br>Identify</p>
             </button></a>
     </div>
 
@@ -100,6 +100,11 @@
 
                 </div>
                 <?php $conn->close(); ?>
+                <footer>
+                    <div class="row" style="margin: 30px;">
+                        
+                    </div>
+                </footer>
 </body>
 
 </html>

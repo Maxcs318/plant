@@ -16,18 +16,31 @@
 
 <body class="mobile">
 
-    <!-- user id top -->
-    <div style="text-align:right;" class="usertop">
-        Username :
-        <?php echo $_SESSION["m_username"]; ?>
-        | Status :
-        <?php echo $_SESSION["m_status"]; ?>
-    </div>
-    <!--end user id top -->
     <p class="text-line">
         <img src="../img/mangoicon.png" style="width: 50px; margin-right: 20px;">
         EXPERT SYSTEM FOR PLANT DISEASE CLASSIFICATION
     </p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2 col-md-2">
+                <img src="../img/pageicon/aboutme.png" class="about-img">
+            </div>
+            <div class="col-xs-6 col-md-6 about-header">
+                 <p style="margin-left: 30px;">Aboutme.</p>
+                <div class="about-box">
+                    <div style="margin-left: 30px; margin-top: auto;height: auto; text-transform: capitalize; font-size: 25px;">
+                        Username : 
+                        <?php echo $_SESSION["m_username"]; ?> <br>
+                        Status :
+                        <?php echo $_SESSION["m_status"]; ?> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-2 col-md-4">
+            </div>
+        </div>
+    </div>
 
     <div class="container box-list" style="margin: auto; margin-top: 30px;">
         <div class="row">
@@ -56,7 +69,7 @@
                         <div class="col-xs-4 col-md-2" style="margin-top:20px;">
                             <?php
                             if ($row["iop_name"] != '') {
-                            ?>
+                                ?>
                                 <img src="../image_file_post/<?php echo $row["iop_name"]; ?>" width="100%">
                             <?php
                         }
@@ -64,35 +77,35 @@
                         </div>
                         <div class="col-xs-8 col-md-10">
                             <div style="margin-top:20px;">
-                                
+
                                 Post ID: <?php echo $row["p_id"] . "<br>"; ?>
                                 Header : <?php echo $row["p_header"] . "<br>"; ?>
                                 Detail : <?php echo substr($row["p_detail"], 0, 100) . "<br>"; ?>
                                 Date : <?php echo substr($row["p_date"], 0, 10)  . "<br>"; ?>
                                 Time : <?php echo substr($row["p_date"], 11)  . "<br>"; ?>
-                                
+
                                 <a class="float:bottom" href='post_selected.php?getPostID= <?php echo $row["p_id"]; ?>'">View Post</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
-                        <?php
-                    }
-                }
-            } else {
-                echo "0 results";
-            }
-            ?>
-            <a class="btn btn-danger float-right" href="../index.php" style="width: 90px; margin:30px 0px 10px ">Back</a>
-    </div>
+                                        <?php
+                                    }
+                                }
+                            } else {
+                                echo "0 results";
+                            }
+                            ?>
+            <a class=" btn btn-danger float-right" href="../index.php" style="width: 90px; margin:30px 0px 10px ">Back</a>
+                </div>
 
-    <footer style=" margin-bottom: 30px;">
-                        <div>
+                <footer style=" margin-bottom: 50px;">
+                    <div>
 
-                        </div>
-                        </footer>
+                    </div>
+                </footer>
 
-                        <?php $conn->close(); ?>
+                <?php $conn->close(); ?>
 </body>
 
 </html>
