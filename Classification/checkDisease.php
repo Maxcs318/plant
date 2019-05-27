@@ -229,6 +229,7 @@
 
     <div class="container">
         <form class="container box-post" style="margin-top: 30px;" action="../ConnData/checkDiseaseUpdate.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="date" value="<?php echo date("Y-m-d H:i:s", time() + (60 * 60) * 5); ?>">
             <div class="row">
                 <div class="col-xs-12 col-md-12"><br>
                     <center>
