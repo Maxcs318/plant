@@ -64,18 +64,13 @@
                         </div>
                         <div class="col-xs-8 col-md-10">
                             <div style="margin-top:20px;">
-                                <div class="float-right">
-
-                                </div>
+                                
                                 Post ID: <?php echo $row["p_id"] . "<br>"; ?>
                                 Header : <?php echo $row["p_header"] . "<br>"; ?>
                                 Detail : <?php echo substr($row["p_detail"], 0, 100) . "<br>"; ?>
                                 Date : <?php echo substr($row["p_date"], 0, 10)  . "<br>"; ?>
                                 Time : <?php echo substr($row["p_date"], 11)  . "<br>"; ?>
-                                <!-- <div style="text-indent: 30px;">
-                                                <?php 
-                                                ?>
-                                            </div> -->
+                                
                                 <a class="float:bottom" href='post_selected.php?getPostID= <?php echo $row["p_id"]; ?>'">View Post</a>
                                         </div>
                                     </div>
@@ -88,7 +83,7 @@
                 echo "0 results";
             }
             ?>
-            <a class="btn btn-danger form-control float-right" href="#" role="button" onclick="history.back(-1)" style="width: 80px;  margin-bottom: 20px;">Back</a>
+            <a class="btn btn-danger float-right" href="../index.php" style="width: 90px; margin:30px 0px 10px ">Back</a>
     </div>
 
     <footer style=" margin-bottom: 30px;">

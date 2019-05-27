@@ -31,7 +31,7 @@
 
             <div class="row">
                 <div class="col-12">
-                <h1 class="header">Choose plant image for check disease.</h1>
+                    <h1 class="header">Choose plant image for check disease.</h1>
                 </div>
             </div>
 
@@ -50,10 +50,12 @@
 
                     <input type="file" name="imageforcheck[]" id="image" required>
                     <input type="hidden" name="linkmember" value="<?php echo $_SESSION["m_id"]; ?>">
+                    <div class="row float-right" style="margin-top:20px; margin-bottom: 10px;">
+                        <a class="btn btn-danger " href="../index.php" style="width: 80px; margin-right: 10px;">Back</a>
+                        <button class="btn-primary form-control " type="submit" name="save" style="width: 80px;">Next</button>
 
-                    <button class="btn-primary form-control" type="submit" name="save" style="width: 30%; margin:20px 30% 20px;">Next</button>
-                    <button class="btn-danger form-control" type="submit" name="save"  onclick="history.back(-1)" style="width: 30%; margin:20px 30% 20px;">Cancel</button>
-                    
+                    </div>
+
                 </div>
 
                 <div class="col-xs-0 col-md-4"></div>
@@ -65,6 +67,8 @@
             </div>
         </div>
     </form>
+
+
 </body>
 
 </html>
