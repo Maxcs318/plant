@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php 
+if(isset($_SESSION["m_status"])){
     if($_SESSION["m_status"] == "admin"){
         header("location:Actor/Admin/AdminPage.php");
     }else if($_SESSION["m_status"] == "expert"){
@@ -7,6 +8,7 @@
     }else if($_SESSION["m_status"] == "user") {
         header("location:Actor/User/UserPage.php");
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
