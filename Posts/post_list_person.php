@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-2 col-md-2">
-                <img src="../img/pageicon/aboutme.png" class="about-img">
+                <img src="../image_profile/<?php echo $_SESSION["m_imageprofile"]; ?>" class="about-img">
             </div>
             <div class="col-xs-6 col-md-6 about-header">
                  <p style="margin-left: 30px;">Aboutme.</p>

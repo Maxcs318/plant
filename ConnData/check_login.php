@@ -18,10 +18,11 @@ $row = $result->fetch_assoc();
 		$_SESSION["m_id"] = $row["m_id"];
 		$_SESSION["m_firstname"] = $row["m_firstname"];
 		$_SESSION["m_lastname"] = $row["m_lastname"];
-		$_SESSION["m_email"] = $row["m_email"];
-		$_SESSION["m_phone"] = $row["m_phone"];
+		// $_SESSION["m_email"] = $row["m_email"];
+		// $_SESSION["m_phone"] = $row["m_phone"];
 		$_SESSION["m_status"] = $row["m_status"];
 		$_SESSION["m_username"] = $row["m_username"];
+		$_SESSION["m_imageprofile"] = $row["m_imageprofile"];  
 
 		//Bla Bla Bla
 		session_write_close();

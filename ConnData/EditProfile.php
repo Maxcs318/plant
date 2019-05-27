@@ -10,7 +10,8 @@ for($i=0;$i<count($_FILES["imageprofile"]["name"]);$i++)
             require("connectDB.php");
             $sql = "UPDATE member SET m_imageprofile= '".$newfilename."' WHERE m_id= '".$_SESSION['m_id']."' ";
             if ($conn->query($sql) === TRUE) {
-                // header("location:../allMember.php");      
+                // header("location:../allMember.php");  
+                $_SESSION["m_imageprofile"] = $newfilename;       
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
@@ -30,8 +31,8 @@ for($i=0;$i<count($_FILES["imageprofile"]["name"]);$i++)
     if ($conn->query($sql) === TRUE) { 
 		$_SESSION["m_firstname"] = $_POST["firstname"];
 		$_SESSION["m_lastname"] = $_POST["lastname"];
-		$_SESSION["m_email"] = $_POST["email"];
-		$_SESSION["m_phone"] = $_POST["phone"];
+		// $_SESSION["m_email"] = $_POST["email"];
+		// $_SESSION["m_phone"] = $_POST["phone"];
         $_SESSION["m_username"] = $_POST["username"];    
         ?>
         <script language="javascript">
