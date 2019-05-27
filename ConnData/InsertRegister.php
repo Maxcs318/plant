@@ -5,13 +5,11 @@
             '".$_POST['phone']."','".$_POST['username']."','".$_POST['password']."','".$_POST['status']."')";
     if ($conn->query($sql) === TRUE) {
     ?> 
-        <!-- ข้อความเช็คว่า Insert สำเร็จไหม -->
-        <center>
-            Insert Success ! ! ! <br>
-        </center>
-        <!-- End -->
+        <script language="javascript">
+            alert("Register Success.");
+            location.href = "../login.php";
+        </script>
     <?php
-        header("location:../login.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
