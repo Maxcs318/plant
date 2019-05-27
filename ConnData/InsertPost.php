@@ -1,15 +1,3 @@
-<?php require("connectDB.php");?>
-
-<?php
-    $sql = "INSERT INTO posts (p_header, p_detail, p_own, p_date, p_linkimage) 
-    VALUES ('".$_POST['header']."','".$_POST['detail']."','".$_POST['own']."','".$_POST['date']."','".$_POST['key_post_image']."')";
-    if ($conn->query($sql) === TRUE) {
-        // header("location:../allMember.php");      
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-    $conn->close();
-?>
 <?php
 for($i=0;$i<count($_FILES["image"]["name"]);$i++)
 {
@@ -23,12 +11,7 @@ for($i=0;$i<count($_FILES["image"]["name"]);$i++)
             $sql = "INSERT INTO image_of_post (iop_name, iop_linkpost) 
             VALUES ('$newfilename','".$_POST['key_post_image']."')";
             if ($conn->query($sql) === TRUE) {
-                ?>
-                <script language="javascript">
-                    alert("Create Post Success.");
-                    location.href = "../Posts/post_list_person.php";
-                </script>  
-                <?php
+                // header("location:../allMember.php");      
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
@@ -37,4 +20,20 @@ for($i=0;$i<count($_FILES["image"]["name"]);$i++)
         }
 	}
 }
+?>
+<?php require("connectDB.php");?>
+<?php
+    $sql = "INSERT INTO posts (p_header, p_detail, p_own, p_date, p_linkimage) 
+    VALUES ('".$_POST['header']."','".$_POST['detail']."','".$_POST['own']."','".$_POST['date']."','".$_POST['key_post_image']."')";
+    if ($conn->query($sql) === TRUE) {
+        ?>
+        <script language="javascript">
+            alert("Create Post Success.");
+            location.href = "../Posts/post_list_person.php";
+        </script>
+        <?php      
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    $conn->close();
 ?>
