@@ -33,67 +33,67 @@
                                 <form action="../ConnData/EditClassificationDisease.php" method="post"> 
                                     <input type="hidden" name="Cl_id" value="<?php echo $_GET["getCl_id"]; ?>">
                                     
-                                    <b>S1 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S1 :</b>  Leaf become a lesion 
                                     <input type="radio" name="S1" value="1"> Yes 
                                     <input type="radio" name="S1" value="0"> No
                                     <br>
-                                    <b>S2 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S2 :</b>  check on lesion area
                                     <input type="radio" name="S2" value="1"> Yes 
                                     <input type="radio" name="S2" value="0"> No
                                     <br>
-                                    <b>S3 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S3 :</b>  Blight on leaf
                                     <input type="radio" name="S3" value="1"> Yes 
                                     <input type="radio" name="S3" value="0"> No
                                     <br>
-                                    <b>S4 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S4 :</b>  Mature lesion are explanded and become dark-brown
                                     <input type="radio" name="S4" value="1"> Yes 
                                     <input type="radio" name="S4" value="0"> No
                                     <br>
-                                    <b>S5 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S5 :</b>  Lesion occur at leaf margin
                                     <input type="radio" name="S5" value="1"> Yes 
                                     <input type="radio" name="S5" value="0"> No
                                     <br>
-                                    <b>S6 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S6 :</b>  Tiny and irregular spot appear on leaf
                                     <input type="radio" name="S6" value="1"> Yes 
                                     <input type="radio" name="S6" value="0"> No
                                     <br>
-                                    <b>S7 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S7 :</b>  Rust-colored or orange spot on leaf
                                     <input type="radio" name="S7" value="1"> Yes 
                                     <input type="radio" name="S7" value="0"> No
                                     <br>
-                                    <b>S8 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S8 :</b>  White spot on leaf
                                     <input type="radio" name="S8" value="1"> Yes 
                                     <input type="radio" name="S8" value="0"> No
                                     <br>
-                                    <b>S9 :</b>  <!-- detail S1 Bla Bla Bla -->                                    
+                                    <b>S9 :</b>  Greenish-gray spot on leaf                                  
                                     <input type="radio" name="S9" value="1"> Yes 
                                     <input type="radio" name="S9" value="0"> No
                                     <br>
-                                    <b>S10 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S10 :</b>  Brown spot on leaf
                                     <input type="radio" name="S10" value="1"> Yes 
                                     <input type="radio" name="S10" value="0"> No
                                     <br>
-                                    <b>S11 :</b>  <!-- detail S1 Bla Bla Bla --> 
+                                    <b>S11 :</b>  Black spot on leaf
                                     <input type="radio" name="S11" value="1"> Yes 
                                     <input type="radio" name="S11" value="0"> No
                                     <br>
-                                    <b>S12 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S12 :</b>  Brown or orange powdery appear on the underside of leaf
                                     <input type="radio" name="S12" value="1"> Yes 
                                     <input type="radio" name="S12" value="0"> No
                                     <br>
-                                    <b>S13 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S13 :</b>  Wither on the tip of leaf
                                     <input type="radio" name="S13" value="1"> Yes 
                                     <input type="radio" name="S13" value="0"> No
                                     <br>
-                                    <b>S14 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S14 :</b>  Watery around lesion area
                                     <input type="radio" name="S14" value="1"> Yes 
                                     <input type="radio" name="S14" value="0"> No
                                     <br>
-                                    <b>S15 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S15 :</b>  Yellow margin around a lesion
                                     <input type="radio" name="S15" value="1"> Yes 
                                     <input type="radio" name="S15" value="0"> No
                                     <br>
-                                    <b>S16 :</b>  <!-- detail S1 Bla Bla Bla -->
+                                    <b>S16 :</b>  Leaf is irregular shape
                                     <input type="radio" name="S16" value="1"> Yes 
                                     <input type="radio" name="S16" value="0"> No
                                     <br>
