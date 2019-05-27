@@ -22,6 +22,8 @@
                 <button type="submit" onclick="window.location.href='Disease.php'">Disease</button>
                 <br>
                 <button type="submit" onclick="window.location.href='Symptoms.php'">Symptoms</button>
+                <br>
+                <button type="submit" onclick="window.location.href='../index.php'" style="width: 80px;">Back</button>
             </div>
         
         </div>

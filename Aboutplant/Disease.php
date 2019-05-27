@@ -30,7 +30,7 @@
 
     <div class="container">
         <!-- home button -->
-        <a href="#">
+        <a href="../index.php">
             <button type="submit" style="border: 0; background: transparent">
                 <img src="../img/home.png" class="imgabout">
                 <p class="text-img-detail">Home</p>
@@ -42,16 +42,23 @@
                 <img src="../img/symptom.png" class="imgabout">
                 <p class="text-img-detail">Symptoms</p>
             </button></a>
+
+        <!-- home button -->
+        <a href="../index.php">
+            <button type="submit" style="border: 0; background: transparent">
+                <img src="../img/back.svg" class="imgabout">
+                <p class="text-img-detail">Back</p>
+            </button></a>
     </div>
 
     <!-- disease 1 -->
     <div class="container" style="margin-top: 10px;">
         <p class="textabout">Disease in Mango</p>
         <div class="row box-disease">
-            <div class="col-md-4">
+            <div class="col-xs-12 col-md-4">
                 <img src="../img/a1.jpg" class="imgdetail" alt="">
             </div>
-            <div class="col-md-8">
+            <div class="col-xs-12 col-md-8">
                 <h2 class="detail-header">
                     1. Anthranose
                 </h2>
@@ -65,10 +72,10 @@
     <!-- disease 2 -->
     <div class="container box-disease" style="margin-top: 30px;">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-xs-12 col-md-4">
                 <img src="../img/a1.jpg" class="imgdetail" alt="">
             </div>
-            <div class="col-md-8">
+            <div class="col-xs-12 col-md-8">
                 <h2 class="detail-header">
                     2. Anthranose
                 </h2>
@@ -81,7 +88,7 @@
 
     <footer style="margin: 30px;">
         <div>
-
+    
         </div>
     </footer>
 

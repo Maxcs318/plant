@@ -54,7 +54,7 @@
                     ?>
                     <div class="col-md-4">
                         <div class="imgpost">
-                            <img src="../image_file_post/<?php echo $row["iop_name"]; ?>" style="margin: 0px; width:100%;">
+                            <img src="../image_file_post/<?php echo $row["iop_name"]; ?>" style="width:100%;">
                         </div>
                     </div>
                 <?php
@@ -77,7 +77,7 @@
         if ($result->num_rows > 0) {
             // output data of each row
             echo '<div class="row">';
-            
+
             echo '<div class="col-12" style="margin-top: 10px;">';
             while ($row = $result->fetch_assoc()) {
 
@@ -98,7 +98,7 @@
                 echo '</div>';
             }
             echo '</div>';
-            
+
             //row
             echo '</div>';
         } else {
@@ -168,8 +168,11 @@
         <?php
     }
     ?>
-
+    <br>
+        <a class="btn btn-danger float-right" href="../index.php" style="width: 90px; margin:30px 0px 10px ">Back</a>
+    <br>
     </div>
+
 </body>
 
 </html>

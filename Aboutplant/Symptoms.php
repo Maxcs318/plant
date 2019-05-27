@@ -31,7 +31,7 @@
 
    <div class="container">
       <!-- home button -->
-      <a href="#">
+      <a href="../index.php">
          <button type="submit" style="border: 0; background: transparent">
             <img src="../img/home.png" class="imgabout">
             <p class="text-img-detail">Home</p>
@@ -49,10 +49,10 @@
    <div class="container" style="margin-top: 10px;">
       <p class="textabout">Symptoms in Mango</p>
       <div class="row box-disease">
-         <div class="col-md-2">
-            <img src="../img/classify_img/S1.jpg" class="imgdetail" alt="">
+         <div class="col-xs-12 col-md-3">
+            <img src="../img/classify_img/S1.jpg" class="imgsymptoms" alt="">
          </div>
-         <div class="col-md-4">
+         <div class="col-xs-12 col-md-3">
             <h2 class="detail-header">
                S1 :
             </h2>
@@ -60,10 +60,10 @@
                Leaf become a lesion.
             </p>
          </div>
-         <div class="col-md-2">
-            <img src="../img/classify_img/S2.jpg" class="imgdetail" alt="">
+         <div class="col-xs-12 col-md-3">
+            <img src="../img/classify_img/S2.jpg" class="imgsymptoms" alt="">
          </div>
-         <div class="col-md-4">
+         <div class="col-xs-12 col-md-3">
             <h2 class="detail-header">
                S2 :
             </h2>
@@ -72,10 +72,10 @@
             </p>
          </div>
 
-         <div class="col-md-2">
-            <img src="../img/classify_img/S3.jpg" class="imgdetail" alt="">
+         <div class="col-xs-12 col-md-3">
+            <img src="../img/classify_img/S3.jpg" class="imgsymptoms" alt="">
          </div>
-         <div class="col-md-4">
+         <div class="col-xs-12 col-md-3">
             <h2 class="detail-header">
                S3 :
             </h2>
@@ -83,10 +83,10 @@
                Blight on leaf.
             </p>
          </div>
-         <div class="col-md-2">
-            <img src="../img/classify_img/S4.jpg" class="imgdetail" alt="">
+         <div class="col-xs-12 col-md-3">
+            <img src="../img/classify_img/S4.jpg" class="imgsymptoms" alt="">
          </div>
-         <div class="col-md-4">
+         <div class="col-xs-12 col-md-3">
             <h2 class="detail-header">
                S16 :
             </h2>
