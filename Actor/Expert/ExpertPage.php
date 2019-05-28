@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../../bootstrap/css/main.css">
     <link rel="shortcut icon" href="../../img/leaficon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"> <!-- sweetalert-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> <!-- sweetalert-->
 </head>
 
 <body>
@@ -93,11 +95,22 @@
     </div>
 <script>
     function logout() {
-        if (confirm("Are you sure you want to Log Out?")) {
-            window.location.href='../../ConnData/logout.php'; 
-        } else {
-            window.location.reload();
-        }
+        
+        swal({
+        title: "Are you sure?", 
+        text: "You want to Logout ." , 
+        type: "warning",
+        confirmButtonText: 'Yes.',
+        confirmButtonColor: '#DD6B55',
+        
+        showCancelButton: true ,
+        }, function() {
+            // swal("Log Out!", " ", "success");
+            //     setTimeout(function(){
+                    window.location.href = "../../ConnData/logout.php";
+            //     },4000);
+        });
+         
     }
 </script>
 </body>

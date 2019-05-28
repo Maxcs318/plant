@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login Fail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"> <!-- sweetalert-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> <!-- sweetalert-->
+</head>
+<body>
+    
+</body>
+</html>
+
 <?php session_start(); ?>
 <?php
 for($i=0;$i<count($_FILES["imageprofile"]["name"]);$i++)
@@ -36,8 +51,14 @@ for($i=0;$i<count($_FILES["imageprofile"]["name"]);$i++)
         $_SESSION["m_username"] = $_POST["username"];    
         ?>
         <script language="javascript">
-            alert("Edit Profile Success.");
-            location.href = "../index.php";
+            swal({
+            title: "Edit Profile Success", 
+            text: "" , 
+            type: "success",
+            // confirmButtonText: 'Yes.',
+            // confirmButtonColor: '#64e986',                
+            });
+            setTimeout("location.href = '../index.php';", 1500);
         </script>
         <?php
     } else {
