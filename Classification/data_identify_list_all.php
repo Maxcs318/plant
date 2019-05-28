@@ -12,6 +12,13 @@
     <link rel="shortcut icon" href="../img/leaficon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Prompt|Sriracha&display=swap" rel="stylesheet">
 
+    <script type="text/javascript">
+        function changeFunc() {
+            var selectBox = document.getElementById("selectBox");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            alert(selectedValue);
+        }
+    </script>
 </head>
 
 <body>
@@ -52,8 +59,16 @@
 
     <div class="container box-list">
         <div class="row ">
-            <div class="col-12"><br>
+            <div class="col-lg-8 col-xs-12"><br>
                 <h4 class="list-header">Data Identify All . <a href="../index.php">Index</a></h4>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <label>Status</label>
+                <select class="form-control" name="changStatus" onchange="changeFunc();">
+                    <option value="">Non</option>
+                    <option value="">Confirm</option>
+                    <option value="">All</option>
+                </select><br>
             </div>
         </div>
         <?php require("../ConnData/connectDB.php"); ?>
