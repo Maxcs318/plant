@@ -12,18 +12,13 @@
     <link rel="shortcut icon" href="../img/leaficon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Prompt|Sriracha&display=swap" rel="stylesheet">
 
-    <script type="text/javascript">
-        function changeFunc() {
-            var selectBox = document.getElementById("selectBox");
-            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-            alert(selectedValue);
-        }
-    </script>
 </head>
 
 <body>
 
-    <?php session_start(); ?>
+    <?php session_start(); 
+    error_reporting (E_ALL ^ E_NOTICE);
+    ?>
     <div style="text-align:right" class="usertop">
         Username :
         <?php echo $_SESSION["m_username"]; ?>
@@ -63,19 +58,31 @@
                 <h4 class="list-header">Data Identify All . <a href="../index.php">Index</a></h4>
             </div>
             <div class="col-lg-4 col-xs-12">
-                <label>Status</label>
-                <select class="form-control" name="changStatus" onchange="changeFunc();">
-                    <option value="">Non</option>
-                    <option value="">Confirm</option>
-                    <option value="">All</option>
+                <label>Status <?php echo $_GET['changStatus']; ?></label>
+                <form action="" method="GET">
+                <select class="form-control" id="selectBox"  name="changStatus" onchange="this.form.submit()" >
+                    <option  value="" selected>Choose</option>
+                    <option  value="non">Non</option>
+                    <option  value="confirm">Confirm</option>
+                    <option  value="">All</option>
                 </select><br>
+                </form>
+                
             </div>
         </div>
         <?php require("../ConnData/connectDB.php"); ?>
+        <?php 
+        if($_GET['changStatus']==''){
+            $sql = " SELECT * FROM classification LEFT JOIN member ON member.m_id=cl_linkmember ORDER BY cl_id DESC ";
+        }else if($_GET['changStatus']=='non'){
+            $sql = " SELECT * FROM classification LEFT JOIN member ON member.m_id=cl_linkmember 
+            WHERE cl_confirm='' ORDER BY cl_id DESC ";
+        }else if($_GET['changStatus']=='confirm'){
+            $sql = " SELECT * FROM classification LEFT JOIN member ON member.m_id=cl_linkmember 
+            WHERE cl_confirm !='' ORDER BY cl_id DESC ";
+        }
+        ?>
         <?php
-        $sql = " SELECT * FROM classification LEFT JOIN member 
-                ON member.m_id=cl_linkmember ORDER BY cl_id DESC ";
-
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             // output data of each row
