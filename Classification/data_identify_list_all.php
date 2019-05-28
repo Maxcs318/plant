@@ -62,7 +62,7 @@
                 <form action="" method="GET">
                 <select class="form-control" id="selectBox"  name="changStatus" onchange="this.form.submit()" >
                     <option  value="" selected>Choose</option>
-                    <option  value="non">Non</option>
+                    <option  value="none">None</option>
                     <option  value="confirm">Confirm</option>
                     <option  value="">All</option>
                 </select><br>
@@ -74,7 +74,7 @@
         <?php 
         if($_GET['changStatus']==''){
             $sql = " SELECT * FROM classification LEFT JOIN member ON member.m_id=cl_linkmember ORDER BY cl_id DESC ";
-        }else if($_GET['changStatus']=='non'){
+        }else if($_GET['changStatus']=='none'){
             $sql = " SELECT * FROM classification LEFT JOIN member ON member.m_id=cl_linkmember 
             WHERE cl_confirm='' ORDER BY cl_id DESC ";
         }else if($_GET['changStatus']=='confirm'){
