@@ -28,7 +28,7 @@
             ?>
             <form action="../ConnData/EditProfile.php" method="post" enctype="multipart/form-data">
                 <center>
-                <img src="../image_profile/<?php echo $row["m_imageprofile"]; ?>" width="60%"><br>  
+                <img src="../Image/image_profile/<?php echo $row["m_imageprofile"]; ?>" width="60%"><br>  
                 </center>
                 <label>Profile :</label>
                 <input type="file" name="imageprofile[]" > <br><br>

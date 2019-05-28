@@ -55,8 +55,15 @@
             while ($row = $result->fetch_assoc()) {
                 if ($row["iop_name"] != '') {
                     ?>
+<<<<<<< HEAD
                     <div class="col-md-4 imgpost">
                             <img src="../image_file_post/<?php echo $row["iop_name"]; ?>" style="width:100%;">
+=======
+                    <div class="col-md-4">
+                        <div class="imgpost">
+                            <img src="../Image/image_file_post/<?php echo $row["iop_name"]; ?>" style="width:100%;">
+                        </div>
+>>>>>>> 24908693d5832345ffcaa97869f9e463db182409
                     </div>
                 <?php
             }

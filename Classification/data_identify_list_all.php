@@ -16,7 +16,9 @@
 
 <body>
 
-    <?php session_start(); ?>
+    <?php session_start(); 
+    error_reporting (E_ALL ^ E_NOTICE);
+    ?>
     <div style="text-align:right" class="usertop">
         Username :
         <?php echo $_SESSION["m_username"]; ?>
@@ -52,15 +54,35 @@
 
     <div class="container box-list">
         <div class="row ">
-            <div class="col-12"><br>
+            <div class="col-lg-8 col-xs-12"><br>
                 <h4 class="list-header">Data Identify All . <a href="../index.php">Index</a></h4>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <label>Status <?php echo $_GET['changStatus']; ?></label>
+                <form action="" method="GET">
+                <select class="form-control" id="selectBox"  name="changStatus" onchange="this.form.submit()" >
+                    <option  value="" selected>Choose</option>
+                    <option  value="none">None</option>
+                    <option  value="confirm">Confirm</option>
+                    <option  value="">All</option>
+                </select><br>
+                </form>
+                
             </div>
         </div>
         <?php require("../ConnData/connectDB.php"); ?>
+        <?php 
+        if($_GET['changStatus']==''){
+            $sql = " SELECT * FROM classification LEFT JOIN member ON member.m_id=cl_linkmember ORDER BY cl_id DESC ";
+        }else if($_GET['changStatus']=='none'){
+            $sql = " SELECT * FROM classification LEFT JOIN member ON member.m_id=cl_linkmember 
+            WHERE cl_confirm='' ORDER BY cl_id DESC ";
+        }else if($_GET['changStatus']=='confirm'){
+            $sql = " SELECT * FROM classification LEFT JOIN member ON member.m_id=cl_linkmember 
+            WHERE cl_confirm !='' ORDER BY cl_id DESC ";
+        }
+        ?>
         <?php
-        $sql = " SELECT * FROM classification LEFT JOIN member 
-                ON member.m_id=cl_linkmember ORDER BY cl_id DESC ";
-
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             // output data of each row
@@ -68,7 +90,7 @@
                 ?>
                 <div class="row border-line" onclick="window.location.href='data_identify_selected.php?getCl_id=<?php echo $row["cl_id"]; ?>'">
                     <div class="col-lg-3 col-xs-12" style="margin-top:20px;">
-                        <img src="../image_for_checkdisease/<?php echo $row["cl_image"]; ?>" width="100%">
+                        <img src="../Image/image_for_checkdisease/<?php echo $row["cl_image"]; ?>" width="100%">
                     </div>
                     <div class="col-lg-3 col-xs-12">
                         <h4>Date</h4>

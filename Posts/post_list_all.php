@@ -71,7 +71,7 @@
                                 // echo $row["iop_id"]."<br>";
                                 // echo $row["iop_name"]."<br>";
                                 ?>
-                                <img src="../image_file_post/<?php echo $row["iop_name"]; ?>" width="100%">
+                                <img src="../Image/image_file_post/<?php echo $row["iop_name"]; ?>" width="100%">
                             <?php
                         }
                         ?>
