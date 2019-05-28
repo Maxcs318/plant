@@ -68,7 +68,7 @@
                 ?>
                 <div class="row border-line" onclick="window.location.href='data_identify_selected.php?getCl_id=<?php echo $row["cl_id"]; ?>'">
                     <div class="col-lg-3 col-xs-12" style="margin-top:20px;">
-                        <img src="../image_for_checkdisease/<?php echo $row["cl_image"]; ?>" width="100%">
+                        <img src="../Image/image_for_checkdisease/<?php echo $row["cl_image"]; ?>" width="100%">
                     </div>
                     <div class="col-lg-3 col-xs-12">
                         <h4>Date</h4>

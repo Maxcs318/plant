@@ -20,7 +20,7 @@ for($i=0;$i<count($_FILES["imageprofile"]["name"]);$i++)
 	if($_FILES["imageprofile"]["name"][$i] != "")
 	{   
         $newfilename= date('dmYHis').str_replace(" ", "", basename($_FILES["imageprofile"]["name"][$i]));
-		if(move_uploaded_file($_FILES["imageprofile"]["tmp_name"][$i],"../image_profile/".$newfilename))
+		if(move_uploaded_file($_FILES["imageprofile"]["tmp_name"][$i],"../Image/image_profile/".$newfilename))
 		{
             require("connectDB.php");
             $sql = "UPDATE member SET m_imageprofile= '".$newfilename."' WHERE m_id= '".$_SESSION['m_id']."' ";

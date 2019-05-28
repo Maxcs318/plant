@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-2 col-md-2">
-                <img src="../image_profile/<?php echo $_SESSION["m_imageprofile"]; ?>" class="about-img">
+                <img src="../Image/image_profile/<?php echo $_SESSION["m_imageprofile"]; ?>" class="about-img">
             </div>
             <div class="col-xs-6 col-md-6 about-header">
                  <p style="margin-left: 30px;">Aboutme.</p>
@@ -70,7 +70,7 @@
                             <?php
                             if ($row["iop_name"] != '') {
                                 ?>
-                                <img src="../image_file_post/<?php echo $row["iop_name"]; ?>" width="100%">
+                                <img src="../Image/image_file_post/<?php echo $row["iop_name"]; ?>" width="100%">
                             <?php
                         }
                         ?>

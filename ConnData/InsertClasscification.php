@@ -7,7 +7,7 @@ for($i=0;$i<count($_FILES["imageforcheck"]["name"]);$i++)
 	if($_FILES["imageforcheck"]["name"][$i] != "")
 	{   
         $newfilename= date('dmYHis').str_replace(" ", "", basename($_FILES["imageforcheck"]["name"][$i]));
-		if(move_uploaded_file($_FILES["imageforcheck"]["tmp_name"][$i],"../image_for_checkdisease/".$newfilename))
+		if(move_uploaded_file($_FILES["imageforcheck"]["tmp_name"][$i],"../Image/image_for_checkdisease/".$newfilename))
 		{
             // echo "Copy/Upload Complete<br>  ".$newfilename."<br>";
             require("connectDB.php");

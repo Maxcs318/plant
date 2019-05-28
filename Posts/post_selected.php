@@ -54,7 +54,7 @@
                     ?>
                     <div class="col-md-4">
                         <div class="imgpost">
-                            <img src="../image_file_post/<?php echo $row["iop_name"]; ?>" style="width:100%;">
+                            <img src="../Image/image_file_post/<?php echo $row["iop_name"]; ?>" style="width:100%;">
                         </div>
                     </div>
                 <?php

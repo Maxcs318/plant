@@ -25,7 +25,7 @@
                 while($row = $result->fetch_assoc()) {
         ?>
             <div class="col-3">
-                <img src="../image_classification/<?php echo $row["s_image"];?>" width="100%" >
+                <img src="../Image/image_classification/<?php echo $row["s_image"];?>" width="100%" >
             </div> 
         <?php 
                 }

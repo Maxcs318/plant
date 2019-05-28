@@ -257,13 +257,13 @@
                 <div class="col-6">
                     <x>
                         <center>Your Image.<br></center>
-                        <img src="../image_for_checkdisease/<?php echo $_SESSION["nameimage"]; ?>">
+                        <img src="../Image/image_for_checkdisease/<?php echo $_SESSION["nameimage"]; ?>">
                     </x>
                 </div>
                 <div class="col-6">
                     <x class="S15">
                         <center>s15<br></center>
-                        <img src="../image_classification/S15.jpg">
+                        <img src="../Image/image_classification/S15.jpg">
                         <div class="row S15">
                             <div class="col-12"><br>
                                 <input class="S15y" type="radio" name="S15" value="1"> Yes
@@ -273,7 +273,7 @@
                     </x>
                     <x class="S9">
                         s9<br>
-                        <img src="../image_classification/S9.jpg">
+                        <img src="../Image/image_classification/S9.jpg">
                         <div class="row S9">
                             <div class="col-12"><br>
                                 <input class="S9y" type="radio" name="S9" value="1"> Yes
@@ -282,7 +282,7 @@
                         </div>
                     </x>
                     <x class="S8">
-                        s8<br><img src="../image_classification/S8.jpg">
+                        s8<br><img src="../Image/image_classification/S8.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S8y" type="radio" name="S8" value="1"> Yes
@@ -291,7 +291,7 @@
                         </div>
                     </x>
                     <x class="S12_2">
-                        s12<br><img src="../image_classification/S12.jpg">
+                        s12<br><img src="../Image/image_classification/S12.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S12_2y" type="radio" name="S12" value="1"> Yes
@@ -301,7 +301,7 @@
 
                     </x>
                     <x class="S12">
-                        s12<br><img src="../image_classification/S12.jpg">
+                        s12<br><img src="../Image/image_classification/S12.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S12y" type="radio" name="S12" value="1"> Yes
@@ -310,7 +310,7 @@
                         </div>
                     </x>
                     <x class="S5">
-                        s5<br><img src="../image_classification/S5.jpg">
+                        s5<br><img src="../Image/image_classification/S5.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S5y" type="radio" name="S5" value="1"> Yes
@@ -319,7 +319,7 @@
                         </div>
                     </x>
                     <x class="S16">
-                        s16<br><img src="../image_classification/S16.jpg">
+                        s16<br><img src="../Image/image_classification/S16.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S16y" type="radio" name="S16" value="1"> Yes
@@ -328,7 +328,7 @@
                         </div>
                     </x>
                     <x class="S9_2">
-                        s9<br><img src="../image_classification/S9.jpg">
+                        s9<br><img src="../Image/image_classification/S9.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S9_2y" type="radio" name="S9" value="1"> Yes
@@ -337,7 +337,7 @@
                         </div>
                     </x>
                     <x class="S8_2">
-                        s8<br><img src="../image_classification/S8.jpg">
+                        s8<br><img src="../Image/image_classification/S8.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S8_2y" type="radio" name="S8" value="1"> Yes
@@ -346,7 +346,7 @@
                         </div>
                     </x>
                     <x class="S4">
-                        s4<br><img src="../image_classification/S4.jpg">
+                        s4<br><img src="../Image/image_classification/S4.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S4y" type="radio" name="S4" value="1"> Yes
@@ -355,7 +355,7 @@
                         </div>
                     </x>
                     <x class="S12_3">
-                        s12<br><img src="../image_classification/S12.jpg">
+                        s12<br><img src="../Image/image_classification/S12.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S12_3y" type="radio" name="S12" value="1"> Yes
@@ -364,7 +364,7 @@
                         </div>
                     </x>
                     <x class="S14">
-                        s14<br><img src="../image_classification/S14.jpg">
+                        s14<br><img src="../Image/image_classification/S14.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S14y" type="radio" name="S14" value="1"> Yes
@@ -373,7 +373,7 @@
                         </div>
                     </x>
                     <x class="S3">
-                        s3<br><img src="../image_classification/S3.jpg">
+                        s3<br><img src="../Image/image_classification/S3.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S3y" type="radio" name="S3" value="1"> Yes
@@ -382,7 +382,7 @@
                         </div>
                     </x>
                     <x class="S9_3">
-                        s9<br><img src="../image_classification/S9.jpg">
+                        s9<br><img src="../Image/image_classification/S9.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S9_3y" type="radio" name="S9" value="1"> Yes
@@ -391,7 +391,7 @@
                         </div>
                     </x>
                     <x class="S6">
-                        s6<br><img src="../image_classification/S6.jpg">
+                        s6<br><img src="../Image/image_classification/S6.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S6y" type="radio" name="S6" value="1"> Yes
@@ -400,7 +400,7 @@
                         </div>
                     </x>
                     <x class="S14_2">
-                        s14<br><img src="../image_classification/S14.jpg">
+                        s14<br><img src="../Image/image_classification/S14.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S14_2y" type="radio" name="S14" value="1"> Yes
@@ -409,7 +409,7 @@
                         </div>
                     </x>
                     <x class="S13">
-                        s13<br><img src="../image_classification/S13.jpg">
+                        s13<br><img src="../Image/image_classification/S13.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S13y" type="radio" name="S13" value="1"> Yes
@@ -418,7 +418,7 @@
                         </div>
                     </x>
                     <x class="S12_4">
-                        s12<br><img src="../image_classification/S12.jpg">
+                        s12<br><img src="../Image/image_classification/S12.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S12_4y" type="radio" name="S12" value="1"> Yes
@@ -427,7 +427,7 @@
                         </div>
                     </x>
                     <x class="S2">
-                        s2<br><img src="../image_classification/S2.jpg">
+                        s2<br><img src="../Image/image_classification/S2.jpg">
                         <div class="row">
                             <div class="col-12"><br>
                                 <input class="S2y" type="radio" name="S2" value="1"> Yes
