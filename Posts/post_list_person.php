@@ -16,10 +16,22 @@
 
 <body class="mobile">
 
-    <p class="text-line">
-        <img src="../img/mangoicon.png" style="width: 50px; margin-right: 20px;">
-        EXPERT SYSTEM FOR PLANT DISEASE CLASSIFICATION
-    </p>
+
+  <!-- user id top -->
+  <div style="text-align:right;" class="usertop">
+        Username :
+        <?php echo $_SESSION["m_username"]; ?>
+        | Status :
+        <?php echo $_SESSION["m_status"]; ?>
+    </div>
+    <!--end user id top -->
+     <!-- slide text -->
+     <div class="row">
+        <p class="item-1 ">EXPERT SYSTEM FOR PLANT DISEASE CLASSIFICATION [item-1]</p>
+        <p class="item-2 ">Some Text for [item-2]</p>
+        <p class="item-3 ">Some Text for [item-3]</p>
+    </div>
+    <!-- end slide text -->
 
     <div class="container">
         <div class="row">
@@ -27,13 +39,16 @@
                 <img src="../img/pageicon/aboutme.png" class="about-img">
             </div>
             <div class="col-xs-6 col-md-6 about-header">
-                 <p style="margin-left: 30px;">Aboutme.</p>
+                 <p class="about-me" style="">My Profile</p>
                 <div class="about-box">
-                    <div style="margin-left: 30px; margin-top: auto;height: auto; text-transform: capitalize; font-size: 25px;">
+                    <div class="about-text-id">
                         Username : 
                         <?php echo $_SESSION["m_username"]; ?> <br>
                         Status :
-                        <?php echo $_SESSION["m_status"]; ?> 
+                        <?php echo $_SESSION["m_status"]; ?> <br>
+                        <a href="../index.php">Home</a> |
+                        <a href="">Edit Profile</a> |
+                        <a href="../Classification/classification_list_person.php">Classify</a>
                     </div>
                 </div>
             </div>
@@ -41,11 +56,12 @@
             </div>
         </div>
     </div>
-
+    
     <div class="container box-list" style="margin: auto; margin-top: 30px;">
         <div class="row">
             <div class="col-xs-12 col-md-12"><br>
-                <h4 class=" list-header"> My Post All . <a href="../index.php">Index</a></h4>
+                <h4 class="list-header"> My Post All </h4>
+                
             </div>
         </div>
         <?php require("../ConnData/connectDB.php"); ?>

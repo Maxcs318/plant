@@ -254,13 +254,13 @@
                 <input type="hidden" name="S16" value="0">
             </div>
             <div class="row container">
-                <div class="col-6">
+                <div class="col-lg-6 col-xs-12 col-md-6">
                     <x>
                         <center>Your Image.<br></center>
                         <img src="../image_for_checkdisease/<?php echo $_SESSION["nameimage"]; ?>">
                     </x>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-xs-12 col-md-">
                     <x class="S15">
                         <center>s15<br></center>
                         <img src="../image_classification/S15.jpg">

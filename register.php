@@ -31,12 +31,12 @@ if(isset($_SESSION["m_status"])){
 
         <!-- user register -->
             <div class="row">
-                <div class="col-xs-4 col-sm-4 col-md-4"></div>
+                <div class="col-xs-0 col-sm-4 col-md-4"></div>
                 
-                <div id="user" class="box col-xs-4 col-sm-12 col-md-4">
+                <div id="user" class="col-xs-12 col-sm-4 col-md-4 box">
                 
                     <h1>User Register</h4>
-                    <button class="tablinks tab " onclick="openCity(event, 'expert')">Expert Register</button>
+                    <!-- <button class="tablinks tab " onclick="openCity(event, 'expert')">Expert Register</button> -->
                     <form action="ConnData/InsertRegister.php" method="post">
 
                         <p>First Name</p>
@@ -60,17 +60,17 @@ if(isset($_SESSION["m_status"])){
                         <input type="hidden" name="status" value="user">
                         <button  type="submit" name="save">Save</button>
                 </div>
-                <div class="col-xs-4 col-sm-4 col-md-4"></div>
+                <div class="col-xs-0 col-sm-4 col-md-4"></div>
             </div>
         </form>
 
             <div class="row">
                 
-                <div class="col-xs-4 col-sm-4 col-md-4"></div>
-                <div id="expert" class="col-xs-4 col-sm-4 col-md-4 box" style="display: none">
+                <div class="col-xs-0 col-sm-4 col-md-4"></div>
+                <div id="expert" class="col-xs-12 col-sm-4 col-md-4 box" style="display: none">
                 
                     <h1>Expert Register</h4>
-                    <button class="tablinks tab  active" onclick="openCity(event, 'user')">User Register</button>
+                    <!-- <button class="tablinks tab  active" onclick="openCity(event, 'user')">User Register</button> -->
                     <form action="ConnData/InsertRegister.php" method="post">
 
                         <p>First Name</p>
@@ -97,7 +97,7 @@ if(isset($_SESSION["m_status"])){
                         <input type="hidden" name="status" value="expert">
                         <button type="submit" name="save">Save</button>
                 </div>
-                <div class="col-xs-4 col-sm-4 col-md-4"></div>
+                <div class="col-xs-0 col-sm-4 col-md-4"></div>
             </div>
         </form>
         <!-- expert register -->
